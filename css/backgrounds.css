@@ -1,0 +1,16 @@
+.backround-contain{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.img-banner1{
+    background: url('../img/banner1.png');
+    background-size: cover
+}
+.img-banner2{
+    background: url('../img/banner2.png');
+    background-size: cover
+}
+.img-profil{
+    background: url('../img/profil.png');
+    background-size: cover
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>SY statika</title>
+
+  <!-- Bootstrap -->
+  <link href="libs/bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+  <link href="css/appStyles.css" rel="stylesheet">
+  <link href="css/backgrounds.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script src="libs/jquery/jquery-3.1.0.min.js" type="text/javascript"></script>
+  <script src="libs/bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+  <script src="js/app.js" type="text/javascript"></script>
+
+</head>
+
+<script src="hotreload/socket.io.js"></script>
+<script src="hotreload/client.js"></script>
+
+<body data-spy="scroll">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container header">
+      <div>sy statika
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>  
+            </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#home">DOMŮ</a></li>
+          <li><a href="#profile">PROFIL</a></li>
+          <li><a href="#service">SLUŽBY</a></li>
+          <li><a href="#references">REFERENCE</a></li>
+          <li><a href="#contact">KONTAKT</a></li>
+        </ul>
+
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container content">
+    <section class="row" id="home">
+      <div class="banner-wrapper col-xs-12 col-sm-6 padding-none">
+        <div class="img-banner1 banner-content parallax"></div>
+      </div>
+      <div class="banner-wrapper hidden-xs col-sm-6 padding-none">
+        <div class="img-banner2 banner-content parallax"></div>
+      </div>
+      <div class="horizontal-divide col-xs-12"></div>
+
+      <div class="content-wrapper ">
+        <div class="col-xs-12">
+          <h1>Statika stavebních konstrukcí</h1>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div>betonových</div>
+          <div>ocelových</div>
+          <div>dřevěných</div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div>základových</div>
+          <div>zděných</div>
+          <div>opláštění staveb</div>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="horizontal-divide col-xs-12"></div>
+    </section>
+
+    <section class="row" id="profile">
+      <div class="content-wrapper ">
+        <div class="col-xs-12">
+          <h1>Profil</h1>
+        </div>
+
+        <div class="col-xs-12 col-sm-5">
+          <p>
+            Provádím navrhování a posudky nosných stavebních konstrukcí a zpracovávám výrobní dokumentaci ocelových a betonových konstrukcí.
+            Dbám na vysokou kvalitu projektů a konstrukčních detailů jak po stránce funkční, tak po stránce ekonomické a
+            v případě požadavku i estetické. Pro zpracování využívám moderní a efektivní postupy projektování stavebních
+            konstrukcí formou 3D modelů v programech <b>Scia Engineer, Tekla Structures a Allplan Engineer.</b>
+          </p>
+          <p>
+            Nabízím spolupráci architektům, projektantům, dodavatelům staveb, investorům i drobným stavebníkům. Zpracovávám dílčí části
+            dokumentace jako statické posudky, statické výpočty nebo komplexní projektovou dokumentaci ve všech stupních
+            požadovaných vyhláškou o dokumentaci staveb.
+          </p>
+        </div>
+        <div class="hidden-xs col-sm-7">
+          <img src="img/profil.png" class="parent-width" />
+
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="horizontal-divide col-xs-12"></div>
+    </section>
+
+    <section class="row" id="service">
+      <div class="content-wrapper ">
+        <div class="col-xs-12">
+          <h1>Služby</h1>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <h2>ocelové konstrukce</h2>
+          <ul>
+            <li>
+              výrobní, skladové a prodejní haly, přístřešky
+            </li>
+            <li>
+              administrativní a obytné budovy, jejich přístavby, vestavby a nástavby
+            </li>
+            <li>
+              technologické konstrukce, dopravní a potrubní mosty
+            </li>
+            <li>
+              sila, nádrže, zásobníky
+            </li>
+            <li>
+              zpracování výrobní dokumentace v programu Tekla Structures
+            </li>
+            <li>
+              analýza ocelových styčníků a jejich optimalizace v programu IDEA StatiCa Steel Connection
+            </li>
+            <li>
+              odhad hmotnosti nabízené konstrukce podložený statickým výpočtem
+            </li>
+            <li>
+              optimalizace hmotnosti již navržené konstrukce
+            </li>
+            <li>
+              NC data pro obrábění a vypalování
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <h2>betonové konstrukce</h2>
+          <ul>
+            <li>
+              monolitické a prefabrikované konstrukce hal, administrativních a obytných budov
+            </li>
+            <li>
+              stropní a základové desky, schodiště
+            </li>
+            <li>
+              opěrné stěny
+            </li>
+            <li>
+              základové patky, pasy a piloty
+            </li>
+            <li>
+              jímky, čistírny odpadních vod
+            </li>
+            <li>
+              zpracování armovacích výkresů v programu Allplan Engineer
+            </li>
+          </ul>
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <h2>ostatní</h2>
+          <ul>
+            <li>
+              statické posudky dílčích části i celých staveb
+            </li>
+            <li>
+              statické výpočty pro projekty rodinných domů
+            </li>
+            <li>
+              dřevostavby, krovy a ostatní dřevěné konstrukce
+            </li>
+            <li>
+              rekonstrukce budov a určení příčin jejich poruch
+            </li>
+            <li>
+              zdivo, zděné konstrukce
+            </li>
+            <li>
+              opláštění staveb
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-8">
+          <div class="row">
+            <div class="col-xs-4 col-sm-12 col-md-4">
+              <img src="img/tekla.png" class="parent-width sw-logo" />
+            </div>
+
+            <div class="col-xs-4 col-sm-12 col-md-4">
+              <img src="img/allplan.png" class="parent-width sw-logo" />
+            </div>
+
+            <div class="col-xs-4 col-sm-12 col-md-4">
+              <img src="img/scia.png" class="parent-width sw-logo" />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="horizontal-divide col-xs-12"></div>
+    </section>
+
+    <section class="row" id="references">
+      <div class="content-wrapper ">
+        <div class="col-xs-12">
+          <h1>Reference</h1>
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+          <ul>
+            <li class="reference-li row">
+              <div class="col-xs-8">
+                <div class="row">
+                  <div class="col-xs-10">
+                    <div>Odsávání Odléváren VP4 a VP6</div>
+                    <div>Třinecké Železárny a.s.</div>
+                    <div>výrobní dokumentace OK</div>
+                    <div>červenec 2013</div>
+                  </div>
+                  <div class="col-xs-2">>></div>
+                </div>
+              </div>
+              <img src="img/reference_demo.png" class="col-xs-4" />
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <ul></ul>
+        </div>
+
+      </div>
+      <div class="horizontal-divide col-xs-12"></div>
+    </section>
+
+    <section class="row" id="contact">
+      <div class="content-wrapper ">
+        <div class="col-xs-12">
+          <h1>Kontakt</h1>
+        </div>
+      </div>
+      <div class="horizontal-divide col-xs-12"></div>
+    </section>
+
+  </div>
+  <!-- /container -->
+
+</body>
+
+</html>
