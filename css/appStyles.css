@@ -1,5 +1,11 @@
 body{
-    position: relative
+    position: relative;
+    font-size:16px
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
 }
 
 .header{
@@ -7,7 +13,12 @@ body{
 }
 
 .content{
-    margin-top: 50px
+    margin-top: 70px
+}
+
+.scrollspy-offset{
+    padding-top: 70px;
+    margin-top: -70px;
 }
 
 .horizontal-divide{
@@ -15,6 +26,7 @@ body{
     background-color: #2E75B6;
 
 }
+
 
 .content-wrapper{
     padding-top: 22px;
@@ -52,25 +64,39 @@ body{
     max-width: 200px
 }
 
-.reference-li{
 
+ul.reference-list {
+    
+}
+ul.reference-list li{
+    background: url('../img/li-reference.png') no-repeat left top;
+    padding-left: 25px;
+    /* reset styles (optional): */
+    list-style: none;
+    margin: 0;
 }
 
-.reference-li .wrapper{
+.reference-list .reference-container{
+    width: calc(100% - 145px);
     display: inline-block;
-    position: relative;
+    border-bottom: 1px #767171 dashed;
+    margin-right: 8px;
 }
 
-.reference-li .wrapper .content{
-    width: calc(100% - 40px);
-    display: inline-block;
-    margin:0;
+.reference-list .reference-img{
+    width: 130px;
+    vertical-align: bottom;
 }
-.reference-li .wrapper .content span{
-    display: block
-}
-.reference-li .wrapper .arrow{
-    width: 40px;
+.reference-list .reference-content{
+    width: calc(100% - 35px);
     display: inline-block;
+}
 
+.reference-list .reference-arrow{
+    width: 30px;
+    display: inline-block;
+    font-size: 45px;
+    line-height: 73px;
+    color: #767171;
+    font-weight: 600;
 }

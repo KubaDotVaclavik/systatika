@@ -29,7 +29,7 @@
 <script src="hotreload/socket.io.js"></script>
 <script src="hotreload/client.js"></script>
 
-<body data-spy="scroll">
+<body data-spy="scroll" data-offset="200px">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container header">
       <div>sy statika
@@ -53,7 +53,7 @@
   </nav>
 
   <div class="container content">
-    <section class="row" id="home">
+    <section class="row scrollspy-offset" id="home">
       <div class="banner-wrapper col-xs-12 col-sm-6 padding-none">
         <div class="img-banner1 banner-content parallax"></div>
       </div>
@@ -83,7 +83,7 @@
       <div class="horizontal-divide col-xs-12"></div>
     </section>
 
-    <section class="row" id="profile">
+    <section class="row scrollspy-offset" id="profile">
       <div class="content-wrapper ">
         <div class="col-xs-12">
           <h1>Profil</h1>
@@ -112,7 +112,7 @@
       <div class="horizontal-divide col-xs-12"></div>
     </section>
 
-    <section class="row" id="service">
+    <section class="row scrollspy-offset" id="service">
       <div class="content-wrapper ">
         <div class="col-xs-12">
           <h1>Služby</h1>
@@ -218,45 +218,163 @@
 
           </div>
         </div>
-
+        <div class="clearfix"></div>
       </div>
 
       <div class="horizontal-divide col-xs-12"></div>
     </section>
 
-    <section class="row" id="references">
+    <section class="row scrollspy-offset" id="references">
       <div class="content-wrapper ">
         <div class="col-xs-12">
           <h1>Reference</h1>
         </div>
 
         <div class="col-xs-12 col-md-6">
-          <ul>
-            <li class="reference-li row">
-              <div class="col-xs-8">
-                <div class="row">
-                  <div class="col-xs-10">
-                    <div>Odsávání Odléváren VP4 a VP6</div>
-                    <div>Třinecké Železárny a.s.</div>
-                    <div>výrobní dokumentace OK</div>
-                    <div>červenec 2013</div>
-                  </div>
-                  <div class="col-xs-2">>></div>
+
+          <ul class="reference-list">
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Odsávání Odléváren VP4 a VP6</b></div>
+                  <div>Třinecké Železárny a.s.</div>
+                  <div>- výrobní dokumentace OK</div>
+                  <div><small>- červenec 2013</small></div>
                 </div>
+                <div class="reference-arrow">»</div>
               </div>
-              <img src="img/reference_demo.png" class="col-xs-4" />
+              <img src="img/reference_demo.png" class="reference-img" />
             </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Montážní jámy Norsko délky 27,0m</b></div>
+                  <div>- výrobní dokumentace OK</div>
+                  <div><small>- říjen  2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Dostavba výrobního areálu Skalice nad Svitavou</b></div>
+                  <div>Baumuller Brno a.s.</div>
+                  <div>- výrobní dokumentace OK a opláštění</div>
+                  <div><small>- listopad  2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Výrobní hala, administrativní přístavba a vestavba</b></div>
+                  <div>Pyrotek Blansko</div>
+                  <div>- projektová dokumentace pro výběr dodavatele</div>
+                  <div><small>- březen  2014</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Nosná OK vestavby kanceláří</b></div>
+                  <div>ITW Pronovia Velká Bíteš</div>
+                  <div>- projektová a výrobní dokumentace</div>
+                  <div><small>- květen  2014</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Skladové haly s textilním opláštěním</b></div>
+                  <div>- Projektová a výrobní dokumentace </div>
+                  <div><small>- červenec 2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Odsávání Odléváren VP4 a VP6</b></div>
+                  <div>Třinecké Železárny a.s.</div>
+                  <div>- výrobní dokumentace OK</div>
+                  <div><small>- červenec 2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Odsávání Odléváren VP4 a VP6</b></div>
+                  <div>Třinecké Železárny a.s.</div>
+                  <div>- výrobní dokumentace OK</div>
+                  <div><small>- červenec 2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Odsávání Odléváren VP4 a VP6</b></div>
+                  <div>Třinecké Železárny a.s.</div>
+                  <div>- výrobní dokumentace OK</div>
+                  <div><small>- červenec 2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
+            <li class="reference-li ">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Odsávání Odléváren VP4 a VP6</b></div>
+                  <div>Třinecké Železárny a.s.</div>
+                  <div>- výrobní dokumentace OK</div>
+                  <div><small>- červenec 2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+
           </ul>
+
         </div>
         <div class="col-xs-12 col-md-6">
           <ul></ul>
         </div>
 
+        <div class="clearfix"></div>
       </div>
       <div class="horizontal-divide col-xs-12"></div>
     </section>
 
-    <section class="row" id="contact">
+    <section class="row scrollspy-offset" id="contact">
       <div class="content-wrapper ">
         <div class="col-xs-12">
           <h1>Kontakt</h1>
