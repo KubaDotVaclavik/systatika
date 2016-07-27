@@ -56,9 +56,8 @@ $(document).ready(function () {
             '</li>';
 
     $.each(data, function(i, item){
-        $("#tweets").append(nano(referenceTemplate, item))
+        $("#reference-list-1").append(nano(referenceTemplate, item))
     })
-debugger;
 
 });
 
