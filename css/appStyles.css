@@ -1,6 +1,8 @@
 body{
     position: relative;
-    font-size:16px
+    font-size:16px;
+    color: #595959;
+    font-family:  Calibri, 'Trebuchet MS', sans-serif
 }
 
 ol, ul {
@@ -8,29 +10,98 @@ ol, ul {
   padding: 0;
 }
 
+.bottom-offset-md{
+    margin-bottom:20px
+}
+
 .header{
     background: linear-gradient(0deg, #5C84CB, #2E61BA);
+    
+}
+
+.header-content{
+    height: 80px;
+}
+
+.header-title{
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+    color: #595959;
+
+}
+
+.header-contacts-wrapper{
+    line-height: 40px;
+}
+@media (min-width: 1200px) {
+    .header-contacts-wrapper{
+        line-height: 80px;
+    }
+}
+
+.header-contact{
+    color: #DEEBF7;
+    font-size: 14px;
+    text-align: right;
+}
+
+.header-contact .glyphicon{
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.header-navbar{
+    background-color: #fff;
+}
+
+.navbar-custom{
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 8px #aaa;
+    font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+}
+.navbar-custom .navbar-nav > li > a{
+    color: #2E61BA;
+    font-size: 0.8em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.navbar-btn{
+    float: right;
+    font-size: 30px;
+    margin: 0;
+    padding: 0 5px;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: #5C84CB !important;
+    /*background-color: rgba(0,0,0,0) !important;*/
+    color: #ddd;
+    outline: none;
 }
 
 .content{
-    margin-top: 70px
+    margin-top: 112px
 }
 
 .scrollspy-offset{
-    padding-top: 70px;
-    margin-top: -70px;
+    padding-top: 112px;
+    margin-top: -112px;
 }
 
 .horizontal-divide{
-    height: 2px;
+    height: 4px;
     background-color: #2E75B6;
-
 }
 
 
 .content-wrapper{
     padding-top: 22px;
     padding-bottom: 22px;
+    /*padding-left: 25px;
+    padding-right:25px*/
 }
 
 .banner-wrapper{
@@ -60,8 +131,44 @@ ol, ul {
     position: relative;
 }
 
+.konstrukce-wrapper{
+    padding-left: 55px;
+    margin-bottom: 12px;
+}
+
+.konstrukce{
+    border-bottom: 1px #767171 dashed;
+    font-size: 24px;
+    line-height: 30px;
+    height: 45px;
+    
+    color: #767171
+}
+
+.sluzby-title{
+    border-bottom: 1px #767171 dashed;
+    color: #767171;
+    font-size: 24px;
+    padding-bottom: 6px;
+}
+
+.sluzby-title-wrapper{
+    padding-left: 25px;
+}
+
+.sw-logo-divider{
+    height: 20px;
+    background-color: #FFE4C4;
+    margin-top: 25px;
+}
+
 .sw-logo{
     max-width: 200px
+}
+
+.sluzby-list{
+    list-style-type: square;
+    list-style-position: inside;
 }
 
 
@@ -73,7 +180,7 @@ ul.reference-list li{
     padding-left: 25px;
     /* reset styles (optional): */
     list-style: none;
-    margin: 0;
+    margin: 0 0 25px 0;
 }
 
 .reference-list .reference-container{
@@ -99,4 +206,26 @@ ul.reference-list li{
     line-height: 73px;
     color: #767171;
     font-weight: 600;
+}
+
+.section-header{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+    font-weight: 600;
+}
+
+.home-section-header{
+    margin-bottom: 4px;
+    font-size: 24px;
+    font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+    font-weight: 400;
+}
+
+.header-decor{
+    margin-top:2px;
+    height: 7px;
+    width: 75px;
+    background-color: #5B9BD5;
+    display: block;
 }

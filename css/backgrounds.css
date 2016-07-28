@@ -14,3 +14,78 @@
     background: url('../img/profil.png');
     background-size: cover
 }
+
+.logo-background{
+    background: url('../img/logo.png');
+    background-size: 150px 38px;
+    background-repeat: no-repeat;
+    background-position:  15px;
+}
+/*
+.phone-background{
+    background: url('../img/phone.png');
+    background-size: 25px 18px;
+    background-repeat: no-repeat;
+}
+
+.mail-background{
+    background: url('../img/mail.png');
+    background-size: 25px 18px;
+    background-repeat: no-repeat;
+}*/
+
+.sluzby-arrow-background{
+    background: url('../img/konstrukce_arrow.png');
+    background-size: 16px 22px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.konstrukce-arrow-background{
+    background: url('../img/konstrukce_arrow.png');
+    background-size: 20px 22px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.beton-background{
+    background: url('../img/beton.png');
+    background-size: 70px 35px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.ocel-background{
+    background: url('../img/ocel.png');
+    background-size: 70px 35px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.drevo-background{
+    background: url('../img/drevo.png');
+    background-size: 70px 35px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.zaklady-background{
+    background: url('../img/zaklady.png');
+    background-size: 70px 35px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.zdivo-background{
+    background: url('../img/zdivo.png');
+    background-size: 70px 35px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.oplasteni-background{
+    background: url('../img/oplasteni.png');
+    background-size: 70px 35px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}

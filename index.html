@@ -29,16 +29,41 @@
 <script src="hotreload/socket.io.js"></script>
 <script src="hotreload/client.js"></script>
 
-<body data-spy="scroll" data-offset="200px">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container header">
-      <div>sy statika
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+<body data-spy="scroll" data-target="#navbar">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="header">
+
+      <div class="container header-content logo-background">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 col-lg-offset-4 col-xs-offset-3 hidden-xs header-title">
+            Projekční a konstrukční kancelář
+          </div>
+          <div class="col-sm-3 col-lg-4 hidden-xs header-contacts-wrapper">
+            <div class="row">
+                <a href="tel:+420776687686">
+              <div class="col-sm-12 col-lg-6 header-contact">
+                <span class="glyphicon glyphicon-phone"></span>+420 776 687 686
+              </div>
+                </a>
+                <a href="mailto:info@systatika.cz">
+              <div class="col-sm-12 col-lg-6 header-contact">
+                <span class="glyphicon glyphicon-envelope"></span>info@systatika.cz
+              </div>
+                </a>
+            </div>
+          </div>
+        </div>
+
+
+        <button type="button" class="navbar-toggle navbar-btn collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
           aria-controls="navbar">
             <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>  
-            </button>
+          </button>
+
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
+    </div>
+    <div class="container">
+      <div id="navbar" class="navbar-collapse collapse header-navbar">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#home">DOMŮ</a></li>
           <li><a href="#profile">PROFIL</a></li>
@@ -63,18 +88,19 @@
       <div class="horizontal-divide col-xs-12"></div>
 
       <div class="content-wrapper ">
-        <div class="col-xs-12">
-          <h1>Statika stavebních konstrukcí</h1>
+        <div class="col-xs-12 bottom-offset-md">
+          <h1 class=" home-section-header">Statika stavebních konstrukcí</h1>
+          <span class="header-decor"></span>
         </div>
         <div class="col-xs-12 col-sm-6">
-          <div>betonových</div>
-          <div>ocelových</div>
-          <div>dřevěných</div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce beton-background">betonových</div></div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce ocel-background">ocelových</div></div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce drevo-background">dřevěných</div></div>
         </div>
         <div class="col-xs-12 col-sm-6">
-          <div>základových</div>
-          <div>zděných</div>
-          <div>opláštění staveb</div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce zaklady-background">základových</div></div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce zdivo-background">zděných</div></div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce oplasteni-background">opláštění staveb</div></div>
         </div>
 
         <div class="clearfix"></div>
@@ -85,8 +111,11 @@
 
     <section class="row scrollspy-offset" id="profile">
       <div class="content-wrapper ">
-        <div class="col-xs-12">
-          <h1>Profil</h1>
+        
+        <div class="col-xs-12 bottom-offset-md">
+          <h1 class="section-header">Profil
+            <span class="header-decor"></span>
+          </h1>
         </div>
 
         <div class="col-xs-12 col-sm-5">
@@ -115,12 +144,16 @@
     <section class="row scrollspy-offset" id="service">
       <div class="content-wrapper ">
         <div class="col-xs-12">
-          <h1>Služby</h1>
+          <h1 class="section-header">Služby
+            <span class="header-decor"></span>
+          </h1>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <h2>ocelové konstrukce</h2>
-          <ul>
+          <div class="sluzby-arrow-background sluzby-title-wrapper">
+            <h2 class="sluzby-title">ocelové konstrukce</h2>
+          </div>
+          <ul class="sluzby-list">
             <li>
               výrobní, skladové a prodejní haly, přístřešky
             </li>
@@ -152,8 +185,10 @@
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <h2>betonové konstrukce</h2>
-          <ul>
+          <div class="sluzby-arrow-background sluzby-title-wrapper">
+            <h2 class="sluzby-title">betonové konstrukce</h2>
+          </div>
+          <ul class="sluzby-list">
             <li>
               monolitické a prefabrikované konstrukce hal, administrativních a obytných budov
             </li>
@@ -178,8 +213,11 @@
         <div class="clearfix visible-sm-block"></div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <h2>ostatní</h2>
-          <ul>
+          <div class="sluzby-arrow-background sluzby-title-wrapper">
+            <h2 class="sluzby-title">ostatni</h2>
+          </div>
+
+          <ul class="sluzby-list">
             <li>
               statické posudky dílčích části i celých staveb
             </li>
@@ -204,6 +242,7 @@
 
         <div class="col-xs-12 col-sm-6 col-md-8">
           <div class="row">
+            <div class="sw-logo-divider"></div>
             <div class="col-xs-4 col-sm-12 col-md-4">
               <img src="img/tekla.png" class="parent-width sw-logo" />
             </div>
@@ -226,20 +265,18 @@
 
     <section class="row scrollspy-offset" id="references">
       <div class="content-wrapper ">
-        <div class="col-xs-12">
-          <h1>Reference</h1>
+        <div class="col-xs-12 bottom-offset-md">
+          <h1 class="section-header">Reference
+            <span class="header-decor"></span>
+          </h1>
         </div>
 
         <div class="col-xs-12 col-md-6">
-
-          <ul class="reference-list" id="reference-list-1">
-
-    
-          </ul>
-
+          <ul class="reference-list" id="reference-list-1"></ul>
         </div>
+
         <div class="col-xs-12 col-md-6">
-          <ul></ul>
+          <ul class="reference-list" id="reference-list-2"></ul>
         </div>
 
         <div class="clearfix"></div>
@@ -250,7 +287,9 @@
     <section class="row scrollspy-offset" id="contact">
       <div class="content-wrapper ">
         <div class="col-xs-12">
-          <h1>Kontakt</h1>
+          <h1 class="section-header">Kontakt
+            <span class="header-decor"></span>
+          </h1>
         </div>
       </div>
       <div class="horizontal-divide col-xs-12"></div>
