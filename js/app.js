@@ -138,7 +138,7 @@ $(document).ready(function () {
 });
 
 $(window).scroll(function (e) {
-    // parallax();
+    parallax();
 });
 
 function parallax() {
