@@ -1,6 +1,6 @@
 body{
     position: relative;
-    font-size:16px;
+    font-size: 18px;
     color: #595959;
     font-family:  Calibri, 'Trebuchet MS', sans-serif
 }
@@ -8,6 +8,12 @@ body{
 ol, ul {
   margin: 0;
   padding: 0;
+}
+
+p {
+    text-indent: 50px;
+    text-align: justify;
+    margin: 0 0 25spx;
 }
 
 .bottom-offset-md{
@@ -26,7 +32,7 @@ ol, ul {
 .header-title{
     line-height: 80px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.2em;
     color: #595959;
 
 }
@@ -42,8 +48,8 @@ ol, ul {
 
 .header-contact{
     color: #DEEBF7;
-    font-size: 14px;
     text-align: right;
+    font-family:  Calibri, 'Trebuchet MS', sans-serif
 }
 
 .header-contact .glyphicon{
@@ -63,9 +69,8 @@ ol, ul {
 }
 .navbar-custom .navbar-nav > li > a{
     color: #2E61BA;
-    font-size: 0.8em;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    font-size: 1em;
+    padding: 6px 35px;
 }
 
 .navbar-btn{
@@ -82,30 +87,56 @@ ol, ul {
     outline: none;
 }
 
-.content{
-    margin-top: 112px
+@media (min-width: 768px){
+    .navbar-nav {
+        float: none;
+        margin: 0;
+    }
+    .navbar-nav > li{
+        box-sizing: border-box;
+        width: 20%;
+        text-align: center;
+    }
 }
 
+.content{
+    margin-top: 80px
+}
 .scrollspy-offset{
-    padding-top: 112px;
-    margin-top: -112px;
+    padding-top: 80px;
+    margin-top: -80px;
+}
+@media (min-width: 768px){
+    .content{
+        margin-top: 112px
+    }
+
+    .scrollspy-offset{
+        padding-top: 112px;
+        margin-top: -112px;
+    }
+ 
 }
 
 .horizontal-divide{
     height: 4px;
     background-color: #2E75B6;
 }
+.horizontal-divide-light{
+    height: 2px;
+    background-color: #5B9BD5;
+}
+
 
 
 .content-wrapper{
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-bottom: 50px;
     /*padding-left: 25px;
     padding-right:25px*/
 }
 
 .banner-wrapper{
-    height: 250px;
+    height: calc(100vh - 112px - 270px);
     overflow: hidden;
     position: relative;
 }
@@ -117,6 +148,9 @@ ol, ul {
   position: relative;
   bottom: 0;
   left: 0;
+}
+
+.hw-acceleration{
     -webkit-transform: translateZ(0);
    -moz-transform: translateZ(0);
    -ms-transform: translateZ(0);
@@ -142,9 +176,9 @@ ol, ul {
 
 .konstrukce{
     border-bottom: 1px #767171 dashed;
-    font-size: 24px;
-    line-height: 30px;
-    height: 45px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    height: 40px;
     
     color: #767171
 }
@@ -152,8 +186,9 @@ ol, ul {
 .sluzby-title{
     border-bottom: 1px #767171 dashed;
     color: #767171;
-    font-size: 24px;
+    font-size: 1.3em;
     padding-bottom: 6px;
+    margin-right: 15px;
 }
 
 .sluzby-title-wrapper{
@@ -170,15 +205,17 @@ ol, ul {
     max-width: 200px
 }
 
-.sluzby-list{
+ul.sluzby-list{
     list-style-type: square;
-    list-style-position: inside;
+    list-style-position: outside;
+    padding-left: 18px;
+    padding-right: 10px;
 }
 
-
-ul.reference-list {
-    
+.sluzby-list > li{
+    margin-bottom: 10px;
 }
+
 ul.reference-list li{
     background: url('../img/li-reference.png') no-repeat left top;
     padding-left: 25px;
@@ -213,7 +250,7 @@ ul.reference-list li{
 }
 
 .section-header{
-    font-size: 28px;
+    font-size: 1.9em;
     text-transform: uppercase;
     font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
     font-weight: 600;

@@ -24,12 +24,15 @@
 
   <script src="js/app.js" type="text/javascript"></script>
 
+  <script src="http://api.mapy.cz/loader.js"></script>
+	<script>Loader.load()</script>
+
 </head>
 <!--
 <script src="hotreload/socket.io.js"></script>
 <script src="hotreload/client.js"></script>-->
 
-<body data-spy="scroll" data-target="#navbar">
+<body data-spy="scroll" data-target="#navbar" class="container-fluid">
   <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
     <div class="header">
 
@@ -40,16 +43,16 @@
           </div>
           <div class="col-sm-3 col-lg-4 hidden-xs header-contacts-wrapper">
             <div class="row">
-                <a href="tel:+420776687686">
-              <div class="col-sm-12 col-lg-6 header-contact">
-                <span class="glyphicon glyphicon-phone"></span>+420 776 687 686
-              </div>
-                </a>
-                <a href="mailto:info@systatika.cz">
-              <div class="col-sm-12 col-lg-6 header-contact">
-                <span class="glyphicon glyphicon-envelope"></span>info@systatika.cz
-              </div>
-                </a>
+              <a href="tel:+420776687686">
+                <div class="col-sm-12 col-lg-6 header-contact">
+                  <span class="glyphicon glyphicon-phone"></span>+420 776 687 686
+                </div>
+              </a>
+              <a href="mailto:info@systatika.cz">
+                <div class="col-sm-12 col-lg-6 header-contact">
+                  <span class="glyphicon glyphicon-envelope"></span>info@systatika.cz
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -77,18 +80,20 @@
     </div>
   </nav>
 
-  <div class="content">
+  <div class="content ">
 
     <section class="row scrollspy-offset" id="home">
+      <div >
 
-      <div class="banner-wrapper col-xs-12 col-sm-6 padding-none">
-        <div class="img-banner1 banner-content "></div>
-      </div>
-      <div class="banner-wrapper hidden-xs col-sm-6 padding-none">
-        <div class="img-banner2 banner-content parallax"></div>  
+        <div class="banner-wrapper col-xs-12 col-sm-6 padding-none">
+          <div class="img-banner1 banner-content hw-acceleration"></div>
+        </div>
+        <div class="banner-wrapper hidden-xs col-sm-6 padding-none">
+          <div class="img-banner2 banner-content hw-acceleration"></div>
+        </div>
       </div>
 
-      <div class="horizontal-divide col-xs-12"></div>
+      <div class="horizontal-divide-light col-xs-12"></div>
 
       <div class="content-wrapper container">
         <div class="col-xs-12 bottom-offset-md">
@@ -96,25 +101,35 @@
           <span class="header-decor"></span>
         </div>
         <div class="col-xs-12 col-sm-5 ">
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce beton-background">betonových</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce ocel-background">ocelových</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce drevo-background">dřevěných</div></div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background">
+            <div class="konstrukce beton-background">betonových</div>
+          </div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background">
+            <div class="konstrukce ocel-background">ocelových</div>
+          </div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background">
+            <div class="konstrukce drevo-background">dřevěných</div>
+          </div>
         </div>
         <div class="col-xs-12 col-sm-5 col-sm-offset-2">
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce zaklady-background">základových</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce zdivo-background">zděných</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce oplasteni-background">opláštění staveb</div></div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background">
+            <div class="konstrukce zaklady-background">základových</div>
+          </div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background">
+            <div class="konstrukce zdivo-background">zděných</div>
+          </div>
+          <div class="konstrukce-wrapper konstrukce-arrow-background">
+            <div class="konstrukce oplasteni-background">opláštění staveb</div>
+          </div>
         </div>
 
         <div class="clearfix"></div>
       </div>
-
-      <div class="horizontal-divide col-xs-12"></div>
     </section>
 
     <section class="row scrollspy-offset" id="profile">
       <div class="content-wrapper container">
-        
+
         <div class="col-xs-12 bottom-offset-md">
           <h1 class="section-header">Profil
             <span class="header-decor"></span>
@@ -141,7 +156,6 @@
         <div class="clearfix"></div>
       </div>
 
-      <div class="horizontal-divide col-xs-12"></div>
     </section>
 
     <section class="row scrollspy-offset" id="service">
@@ -263,7 +277,6 @@
         <div class="clearfix"></div>
       </div>
 
-      <div class="horizontal-divide col-xs-12"></div>
     </section>
 
     <section class="row scrollspy-offset" id="references">
@@ -284,7 +297,7 @@
 
         <div class="clearfix"></div>
       </div>
-      <div class="horizontal-divide col-xs-12"></div>
+      
     </section>
 
     <section class="row scrollspy-offset" id="contact">
@@ -294,6 +307,15 @@
             <span class="header-decor"></span>
           </h1>
         </div>
+
+        <div class="col-xs-12 col-md-6">
+          
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+          <div id="map"></div>
+        </div>
+
       </div>
       <div class="horizontal-divide col-xs-12"></div>
     </section>

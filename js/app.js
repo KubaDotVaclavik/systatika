@@ -1,5 +1,9 @@
 $(document).ready(function () {
     $('body').scrollspy({ target: '#navbar' })
+    // debugger;
+    // var center = SMap.Coords.fromWGS84(14.41790, 50.12655);
+    // var m = new SMap(JAK.gel("m"), center, 13);
+    // m.addDefaultLayer(SMap.DEF_BASE).enable();
 
     // Reference rendering
     var data = [
@@ -128,9 +132,9 @@ $(document).ready(function () {
         '</li>';
 
     $.each(data, function (i, item, arr) {
-        if(data.length / 2 <= i){
+        if (data.length / 2 <= i) {
             $("#reference-list-2").append(nano(referenceTemplate, item))
-        }else{
+        } else {
             $("#reference-list-1").append(nano(referenceTemplate, item))
         }
     })

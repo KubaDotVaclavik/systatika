@@ -36,7 +36,7 @@
 
 .sluzby-arrow-background{
     background: url('../img/konstrukce_arrow.png');
-    background-size: 16px 22px;
+    background-size: 14px 20px;
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -45,7 +45,7 @@
     background: url('../img/konstrukce_arrow.png');
     background-size: 20px 22px;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left 6px;
 }
 
 .beton-background{
