@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $('body').scrollspy({ target: '#navbar' })
+    
     // debugger;
     // var center = SMap.Coords.fromWGS84(14.41790, 50.12655);
     // var m = new SMap(JAK.gel("m"), center, 13);
