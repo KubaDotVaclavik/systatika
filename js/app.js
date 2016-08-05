@@ -1,11 +1,16 @@
 $(document).ready(function () {
-    $('body').scrollspy({ target: '#navbar' })
-    
-    // debugger;
-    // var center = SMap.Coords.fromWGS84(14.41790, 50.12655);
-    // var m = new SMap(JAK.gel("m"), center, 13);
-    // m.addDefaultLayer(SMap.DEF_BASE).enable();
+    initScrollspy()
 
+    referenceTemplating()
+
+    initMap()
+});
+
+function initScrollspy() {
+    $('body').scrollspy({ target: '#navbar' })
+}
+
+function referenceTemplating() {
     // Reference rendering
     var data = [
         {
@@ -118,38 +123,69 @@ $(document).ready(function () {
     ]
 
     // for(var i = 0, l = data.length)
+    // var referenceTemplate =
+    //     '<li class="reference-li">' +
+    //     '<div class="reference-container">' +
+    //     '<div class="reference-content">' +
+    //     '<div><b>{title}</b></div>' +
+    //     '<div>{subtitle}</div>' +
+    //     '<div>- {doc}</div>' +
+    //     '<div><small>- {date}</small></div>' +
+    //     '</div>' +
+    //     '<div class="reference-arrow">»</div>' +
+    //     '</div>' +
+    //     '<img src="img/reference_demo.png" class="reference-img" />' +
+    //     '</li>';
+
     var referenceTemplate =
-        '<li class="reference-li">' +
-        '<div class="reference-container">' +
-        '<div class="reference-content">' +
-        '<div><b>{title}</b></div>' +
-        '<div>{subtitle}</div>' +
-        '<div>- {doc}</div>' +
-        '<div><small>- {date}</small></div>' +
-        '</div>' +
-        '<div class="reference-arrow">»</div>' +
-        '</div>' +
-        '<img src="img/reference_demo.png" class="reference-img" />' +
-        '</li>';
+        '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">' +
+        '<div class="ref-container reference-background">' +
+            '<div class="text-content">' +
+            '<div><b>{title}</b></div>' +
+            '<div>{subtitle}</div>' +
+            '<div>- {doc}</div>' +
+            '<div><small>- {date}</small></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
 
-    $.each(data, function (i, item, arr) {
-        if (data.length / 2 <= i) {
-            $("#reference-list-2").append(nano(referenceTemplate, item))
-        } else {
-            $("#reference-list-1").append(nano(referenceTemplate, item))
-        }
-    })
+            $.each(data, function (i, item, arr) {
+                var $item = $(nano(referenceTemplate, item))
+                var $bgItem = $item.find('.reference-background')
+                $bgItem.css("background-image", "url('img/ref/thumbnails/alitech Brno haly A a B.JPG')")
+                
+                $("#reference-container").append($item)
 
-});
-
-$(window).scroll(function (e) {
-    parallax();
-});
-
-function parallax() {
-    var scrolled = $(window).scrollTop();
-    $('.parallax').css('bottom', -(scrolled * 0.3) + 'px');
+            })
 }
+
+function initMap() {
+    var mapProp = {
+        center: new google.maps.LatLng(49.696814, 16.691488),
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(49.6870824, 16.6668806),
+        map: map
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+        content: "<p>Přední Arnoštov 19</p><p>571 01 Moravská Třebová</p>"
+    });
+
+    infowindow.open(map, marker);
+
+    marker.addListener('click', function () {
+        infowindow.open(map, marker);
+    });
+
+}
+
 
 /* Nano Templates - https://github.com/trix/nano */
 function nano(template, data) {

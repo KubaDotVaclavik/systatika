@@ -10,7 +10,7 @@ ol, ul {
   padding: 0;
 }
 
-p {
+p.indent-justify {
     text-indent: 50px;
     text-align: justify;
     margin: 0 0 25spx;
@@ -216,6 +216,36 @@ ul.sluzby-list{
     margin-bottom: 10px;
 }
 
+.ref-container{
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    cursor: pointer;
+    margin-bottom: 30px;
+    height: 255px;
+}
+.ref-container .reference-img{
+    width: 100%;
+}
+
+.ref-container .text-content{
+    padding: 8px 16px;
+    margin-top: 100px;
+    height: 150px;
+    overflow: hidden;
+    background: #fff;
+    background: -webkit-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,1));
+    background: -moz-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,1));
+    background: linear-gradient( rgba(255,255,255,0.8), rgba(255,255,255,1));
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.ref-container:hover .text-content{
+    margin-top: 50px;
+    height: 200px;
+}
+
 ul.reference-list li{
     background: url('../img/li-reference.png') no-repeat left top;
     padding-left: 25px;
@@ -269,4 +299,18 @@ ul.reference-list li{
     width: 75px;
     background-color: #5B9BD5;
     display: block;
+}
+
+.map-container{
+    height: 350px;
+}
+
+.kontakt-form > div{
+    margin-bottom: 15px;
+}
+
+.kontakt-input{
+    width: 100%;
+    max-width: 100%;
+    padding: 2px 6px;
 }
