@@ -216,68 +216,68 @@ ul.sluzby-list{
     margin-bottom: 10px;
 }
 
+@media (min-width: 590px) and (max-width: 992px){
+    .col-custom-sm-6 {
+        width: 50%;
+    }
+}
+
 .ref-container{
     border: 1px solid #ccc;
     box-shadow: 0 0 5px #ccc;
     cursor: pointer;
     margin-bottom: 30px;
     height: 255px;
+    position: relative;
 }
 .ref-container .reference-img{
     width: 100%;
 }
 
 .ref-container .text-content{
-    padding: 8px 16px;
-    margin-top: 100px;
-    height: 150px;
+    padding: 8px 16px 20px 16px;
+    margin-top: 120px;
+    height: 130px;
     overflow: hidden;
     background: #fff;
-    background: -webkit-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,1));
-    background: -moz-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,1));
-    background: linear-gradient( rgba(255,255,255,0.8), rgba(255,255,255,1));
+    background: rgba(255,255,255,0.95);
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
 .ref-container:hover .text-content{
-    margin-top: 50px;
-    height: 200px;
+    margin-top: 0px;
+    height: 250px;
 }
 
-ul.reference-list li{
-    background: url('../img/li-reference.png') no-repeat left top;
-    padding-left: 25px;
-    /* reset styles (optional): */
-    list-style: none;
-    margin: 0 0 25px 0;
+.ref-container .bottom-mask{
+    background: rgba(255,255,255,0.7);
+    background: -webkit-linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,1));
+    background: -moz-linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,1));
+    background: linear-gradient( rgba(255,255,255,0.2), rgba(255,255,255,1));
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    bottom: 0;
 }
 
-.reference-list .reference-container{
-    width: calc(100% - 145px);
-    display: inline-block;
-    border-bottom: 1px #767171 dashed;
-    margin-right: 8px;
+.ref-container-v2{
+    padding: 16px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    height: 300px;
+    position: relative;
 }
 
-.reference-list .reference-img{
-    width: 130px;
-    vertical-align: bottom;
-}
-.reference-list .reference-content{
-    width: calc(100% - 35px);
-    display: inline-block;
+.ref-container-v2 .image{
+    width: 80%;
+    border: 2px solid #ccc;
+    position: absolute;
+    bottom: 15px;
 }
 
-.reference-list .reference-arrow{
-    width: 30px;
-    display: inline-block;
-    font-size: 45px;
-    line-height: 73px;
-    color: #767171;
-    font-weight: 600;
-}
 
 .section-header{
     font-size: 1.9em;

@@ -17,18 +17,22 @@ function referenceTemplating() {
             title: "Odsávání Odléváren VP4 a VP6",
             subtitle: "Třinecké Železárny a.s.",
             doc: "výrobní dokumentace OK",
-            date: "červenec  2013"
+            date: "červenec  2013",
+            background: "img/gallery/01_odsavani/thumbnail.jpg",
         },
         {
             title: "Montážní jámy Norsko délky 27,0m",
+            subtitle: "CS profil s.r.o.",
             doc: "výrobní dokumentace OK",
             date: "říjen  2013",
+            background: "img/gallery/02_norsko/thumbnail.jpg",
         },
         {
             title: "Dostavba výrobního areálu Skalice nad Svitavou",
             subtitle: "Baumuller Brno a.s.",
             doc: "výrobní dokumentace OK a opláštění",
             date: "listopad  2013",
+            background: "img/gallery/03_baumuller/thumbnail.jpg",
         },
         {
             title: "Výrobní hala, administrativní přístavba a vestavba",
@@ -44,14 +48,9 @@ function referenceTemplating() {
         },
         {
             title: "Skladové haly s textilním opláštěním",
-            doc: "Projektová a výrobní dokumentace",
+            subtitle: "BENALY Holding s.r.o.",
+            doc: "projektová a výrobní dokumentace",
             date: "2014-2016",
-        },
-        {
-            title: "Hasičská zbrojnice",
-            subtitle: "Město Brno",
-            doc: "projektová a výrobní dokumentace zastřešení",
-            date: "červenec  2014",
         },
         {
             title: "Inovace výrobkové řady bentonitových steliv",
@@ -104,7 +103,7 @@ function referenceTemplating() {
         {
             title: "Zastřešení hnojiště",
             subtitle: "Agro CS Lučenec",
-            doc: "Projektová a výrobní dokumentace",
+            doc: "projektová a výrobní dokumentace",
             date: "prosinec 2015",
         },
         {
@@ -138,31 +137,52 @@ function referenceTemplating() {
     //     '</li>';
 
     var referenceTemplate =
-        '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">' +
+        '<div class=" col-custom-sm-6 col-xs-12 col-sm-6 col-md-4 col-lg-3">' +
         '<div class="ref-container reference-background">' +
-            '<div class="text-content">' +
-            '<div><b>{title}</b></div>' +
-            '<div>{subtitle}</div>' +
-            '<div>- {doc}</div>' +
-            '<div><small>- {date}</small></div>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
+        '<div class="text-content">' +
+        '<div><b>{title}</b></div>' +
+        '<div>{subtitle}</div>' +
+        '<div>- {doc}</div>' +
+        '<div><small>- {date}</small></div>' +
+        '</div>' +
+        '<div class="bottom-mask"></div>' +
+        '</div>' +
+        '</div>';
 
-            $.each(data, function (i, item, arr) {
-                var $item = $(nano(referenceTemplate, item))
-                var $bgItem = $item.find('.reference-background')
-                $bgItem.css("background-image", "url('img/ref/thumbnails/alitech Brno haly A a B.JPG')")
-                
-                $("#reference-container").append($item)
 
-            })
+    var referenceTemplate2 =
+        '<div class=" col-custom-sm-6 col-xs-12 col-sm-6 col-md-4 col-lg-3">' +
+        '<div class="ref-container-v2">' +
+        '<div><a>{title}</a></div>' +
+        '<div>{subtitle}</div>' +
+        '<div>- {doc}</div>' +
+        '<div><small>- {date}</small></div>' +
+        '<img class="image" />'
+    '</div>' +
+        '</div>';
+
+    $.each(data, function (i, item, arr) {
+        var $item = $(nano(referenceTemplate, item))
+        $item.on('click', openGallery.bind(undefined, i))
+        var $bgItem = $item.find('.reference-background')
+        $bgItem.css("background-image", "url('" + item.background + "')")
+
+        $("#reference-container").append($item)
+    })
+
+    $.each(data, function (i, item, arr) {
+        var $item = $(nano(referenceTemplate2, item))
+        var $bgItem = $item.find('.image')
+        $bgItem.attr("src", "img/ref/thumbnails/alitech Brno haly A a B.JPG")
+
+        $("#reference-container").append($item)
+    })
 }
 
 function initMap() {
     var mapProp = {
         center: new google.maps.LatLng(49.696814, 16.691488),
-        zoom: 11,
+        zoom: 7,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
@@ -174,15 +194,95 @@ function initMap() {
         map: map
     });
 
-    var infowindow = new google.maps.InfoWindow({
-        content: "<p>Přední Arnoštov 19</p><p>571 01 Moravská Třebová</p>"
-    });
+    // var infowindow = new google.maps.InfoWindow({
+    //     content: "<p>Přední Arnoštov 19</p><p>571 01 Moravská Třebová</p>"
+    // });
 
-    infowindow.open(map, marker);
+    // infowindow.open(map, marker);
 
-    marker.addListener('click', function () {
-        infowindow.open(map, marker);
-    });
+    // marker.addListener('click', function () {
+    //     infowindow.open(map, marker);
+    // });
+
+}
+
+function openGallery(i) {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    // build items array
+    var items = [
+        {
+            src: 'img/gallery/01_odsavani/01.jpg',
+            w: 1200,
+            h: 579,
+            title: 'Odsávání Odléváren VP4 a VP6'
+        },
+        {
+            src: 'img/gallery/01_odsavani/02.jpg',
+            w: 1200,
+            h: 894,
+            title: 'Odsávání Odléváren VP4 a VP6'
+        },
+        {
+            src: 'img/gallery/02_norsko/01.jpg',
+            w: 1200,
+            h: 497,
+            title: 'Montážní jámy Norsko délky 27,0m'
+        },
+        {
+            src: 'img/gallery/02_norsko/02.jpg',
+            w: 1200,
+            h: 579,
+            title: 'Montážní jámy Norsko délky 27,0m'
+        },
+        {
+            src: 'img/gallery/02_norsko/03.jpg',
+            w: 1200,
+            h: 579,
+            title: 'Montážní jámy Norsko délky 27,0m'
+        },
+        {
+            src: 'img/gallery/03_baumuller/01.jpg',
+            w: 1200,
+            h: 579,
+            title: 'Dostavba výrobního areálu Skalice nad Svitavou'
+        },
+        {
+            src: 'img/gallery/03_baumuller/02.jpg',
+            w: 1200,
+            h: 579,
+            title: 'Dostavba výrobního areálu Skalice nad Svitavou'
+        },
+        {
+            src: 'img/gallery/03_baumuller/03.jpg',
+            w: 1200,
+            h: 579,
+            title: 'Dostavba výrobního areálu Skalice nad Svitavou'
+        },
+    ];
+
+    // var startAt = -1, tempTitle = '';
+    
+
+    // while(i > 0){
+    //     if(tempTitle !== items[startAt].title){
+    //         tempTitle = items[startAt].title
+    //         i--;
+    //     } 
+    //     startAt++;
+    // }
+
+
+    // define options (if needed)
+    var options = {
+        // optionName: 'option value'
+        // for example:
+        index: 0 // start at first slide
+    };
+
+    // Initializes and opens PhotoSwipe
+    var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
 
 }
 
