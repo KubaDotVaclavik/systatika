@@ -16,6 +16,14 @@ p.indent-justify {
     margin: 0 0 25spx;
 }
 
+label{
+    font-weight: normal;
+}
+
+.container{
+    padding: 0
+}
+
 .bottom-offset-md{
     margin-bottom:20px
 }
@@ -38,7 +46,7 @@ p.indent-justify {
 }
 
 .header-contacts-wrapper{
-    line-height: 40px;
+    line-height: 80px;
 }
 @media (min-width: 1200px) {
     .header-contacts-wrapper{
@@ -131,17 +139,38 @@ p.indent-justify {
 
 .content-wrapper{
     padding-bottom: 50px;
+    
+    background-color: #fff;
     /*padding-left: 25px;
     padding-right:25px*/
+}
+.background-color{
+    background-color: #fff;
 }
 
 .banner-wrapper{
     height: calc(100vh - 112px - 270px);
     overflow: hidden;
     position: relative;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #5B9BD5;
 }
+
+.banner-wrapper-ligh-color{
+    color: #fff
+}
+
 .banner-content{
     height: 100%;
+}
+
+.banner-text{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .parallax{
@@ -278,6 +307,29 @@ ul.sluzby-list{
     bottom: 15px;
 }
 
+.reference-title{
+    color: #888;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 2px;
+}
+.reference-subtitle{
+    /*border-bottom: 1px solid #ddd*/
+    margin-bottom: 3px;
+
+}
+.reference-doc{
+    font-size: 0.9em;
+    margin-bottom: 3px;
+    /*border-bottom: 1px solid #ddd*/
+}
+.reference-date{
+    font-size: 0.9em;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 3px;
+    }
+
 
 .section-header{
     font-size: 1.9em;
@@ -305,12 +357,42 @@ ul.sluzby-list{
     height: 350px;
 }
 
-.kontakt-form > div{
-    margin-bottom: 15px;
+.kontakt-form > div.form-group{
+    padding-bottom: 20px;
+    margin-bottom: 0px;
 }
 
+.kontakt-form .btn-lg{
+    border-radius: 0
+} 
+
 .kontakt-input{
-    width: 100%;
+    /*width: 100%;
     max-width: 100%;
-    padding: 2px 6px;
+    padding: 2px 6px;*/
+}
+
+.form-control{
+    border-radius: 0;
+    font-size: 1em;
+}
+
+.help-block{
+    margin:0;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        }
+    to {
+        transform: rotate(360deg);
+        }
+}
+.rotate{
+    transform-origin: center center;
+    animation: rotate 2s infinite linear;
 }
