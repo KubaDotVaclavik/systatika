@@ -352,24 +352,27 @@ ul.sluzby-list{
 
 .reference-title{
     color: #888;
-    font-size: 1.1em;
-    font-weight: 500;
-    border-bottom: 1px solid #bbb;
-    margin-bottom: 2px;
+    font-size: 1.2em;
+    font-weight: 900;
+    margin-bottom: 4px;
+    line-height: 1.1em;
+
 }
 .reference-subtitle{
     /*border-bottom: 1px solid #ddd*/
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #bbb;
 
 }
 .reference-doc{
-    font-size: 0.9em;
-    margin-bottom: 3px;
+    /*font-size: 0.9em;*/
+    margin-bottom: 5px;
+    line-height: 1.2em;
     /*border-bottom: 1px solid #ddd*/
 }
 .reference-date{
-    font-size: 0.9em;
-    border-bottom: 1px solid #ddd;
+    font-size: 0.8em;
+    /*border-bottom: 1px solid #ddd;*/
     margin-bottom: 3px;
     }
 

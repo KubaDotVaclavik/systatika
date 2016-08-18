@@ -152,7 +152,7 @@ function referenceTemplating() {
         '<div class="text-content">' +
         '<div class="reference-title">{title}</div>' +
         '<div class="reference-subtitle">{subtitle}</div>' +
-        '<div class="reference-doc">{doc}</div>' +
+        '<div class="reference-doc">- {doc}</div>' +
         '<div class="reference-date">{date}</div>' +
         '</div>' +
         '<div class="bottom-mask"></div>' +
