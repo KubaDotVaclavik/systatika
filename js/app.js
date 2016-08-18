@@ -156,6 +156,7 @@ function referenceTemplating() {
         '<div class="reference-date">{date}</div>' +
         '</div>' +
         '<div class="bottom-mask"></div>' +
+        '<div class="toggle-wrapper"><div class="toggle">»</div></div>' +
         '</div>' +
         '</div>';
 
@@ -177,8 +178,14 @@ function referenceTemplating() {
         var $bgItem = $item.find('.reference-background')
         $bgItem.css("background-image", "url('" + item.background + "')")
 
+        $item.find('.toggle-wrapper').on('click', function(e){
+            e.stopPropagation()
+            $item.find('.ref-container').toggleClass('slideup')
+        })
+
         $("#reference-container").append($item)
     })
+
 }
 
 function initMap() {

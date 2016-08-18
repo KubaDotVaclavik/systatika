@@ -70,15 +70,30 @@ label{
 }
 
 .navbar-custom{
-    background-color: #fff;
+     background-color: #203864;
+    /*background-color: #fff;*/
     border: none;
     box-shadow: 0 0 8px #aaa;
     font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
 }
 .navbar-custom .navbar-nav > li > a{
-    color: #2E61BA;
+     color: #fff;
+    /*color: #2E61BA;*/
     font-size: 1em;
     padding: 6px 35px;
+}
+.navbar-custom .navbar-nav > li:hover > a{
+    color: #ccc
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus{
+ background-color: #2F5394;
+  color: #fff;
+
+}
+.navbar-menu-custom{
+    background-color: #203864;
 }
 
 .navbar-btn{
@@ -149,7 +164,7 @@ label{
 }
 
 .banner-wrapper{
-    height: calc(100vh - 112px - 270px);
+    height: calc(100vh - 112px - 338px);
     overflow: hidden;
     position: relative;
     font-size: 45px;
@@ -200,7 +215,7 @@ label{
 
 .konstrukce-wrapper{
     padding-left: 55px;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
 }
 
 .konstrukce{
@@ -259,12 +274,17 @@ ul.sluzby-list{
     height: 255px;
     position: relative;
 }
+.ref-container:hover{
+    box-shadow: 0 0 8px #aaa;
+
+}
 .ref-container .reference-img{
     width: 100%;
 }
 
 .ref-container .text-content{
     padding: 8px 16px 20px 16px;
+    box-shadow: 0 -3px 3px #eee;
     margin-top: 120px;
     height: 130px;
     overflow: hidden;
@@ -275,7 +295,7 @@ ul.sluzby-list{
     transition: all .2s ease-in-out;
 }
 
-.ref-container:hover .text-content{
+.ref-container.slideup .text-content{
     margin-top: 0px;
     height: 250px;
 }
@@ -289,6 +309,29 @@ ul.sluzby-list{
     height: 25px;
     width: 100%;
     bottom: 0;
+}
+.ref-container .toggle-wrapper{
+        padding: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    transition: all .2s ease-in-out;
+
+    background: rgba(255,255,255,0.7);
+}
+.ref-container.slideup .toggle-wrapper{
+    -webkit-transform: rotateX(180deg); /* Safari */
+    transform: rotateX(180deg);
+}
+
+.ref-container .toggle{
+    font-size: 45px;
+    transform: rotate(-90deg);  
+    line-height: 25px;
+}
+
+.ref-container .toggle:hover{
+    /*transform: translateY(2px);*/
 }
 
 .ref-container-v2{
@@ -339,7 +382,8 @@ ul.sluzby-list{
 }
 
 .home-section-header{
-    margin-bottom: 4px;
+    margin-top: 45px;
+    margin-bottom: 10px;
     font-size: 24px;
     font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
     font-weight: 400;
