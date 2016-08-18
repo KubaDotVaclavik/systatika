@@ -164,7 +164,7 @@ label{
 }
 
 .banner-wrapper{
-    height: calc(100vh - 112px - 338px);
+    /*height: calc(100vh - 112px - 338px);*/
     overflow: hidden;
     position: relative;
     font-size: 45px;

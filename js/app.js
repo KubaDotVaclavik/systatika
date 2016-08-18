@@ -5,6 +5,8 @@ $(document).ready(function () {
 
     initMap()
 
+    setHeightOfHomeSection()
+
     $('#contact-form').on('submit', function (e) { e.preventDefault() })
     $("#submit-btn").on('click', onSubmitContactForm)
     $("#submit-btn-success").on('click', formDefaultState)
@@ -213,6 +215,16 @@ function initMap() {
     //     infowindow.open(map, marker);
     // });
 
+}
+
+function setHeightOfHomeSection(){
+    var navbarHeight = $('.navbar').outerHeight()
+    var contentHeight = $('#home .content-wrapper').outerHeight()
+    var windowHeight = $(window).outerHeight()
+    var bannerHeight = windowHeight - contentHeight - navbarHeight
+    
+    bannerHeight = bannerHeight < 180 ? 180 : bannerHeight
+    $('#home .banner-wrapper').height(bannerHeight)
 }
 
 function openGallery(idx) {
