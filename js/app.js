@@ -10,6 +10,8 @@ $(document).ready(function () {
     $('#contact-form').on('submit', function (e) { e.preventDefault() })
     $("#submit-btn").on('click', onSubmitContactForm)
     $("#submit-btn-success").on('click', formDefaultState)
+
+    $(window).resize(setHeightOfHomeSection)
 });
 
 function initScrollspy() {

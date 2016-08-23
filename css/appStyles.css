@@ -126,8 +126,8 @@ label{
     margin-top: 80px
 }
 .scrollspy-offset{
-    padding-top: 80px;
-    margin-top: -80px;
+    padding-top: 110px;
+    margin-top: -110px;
 }
 @media (min-width: 768px){
     .content{
@@ -135,8 +135,8 @@ label{
     }
 
     .scrollspy-offset{
-        padding-top: 112px;
-        margin-top: -112px;
+        padding-top: 132px;
+        margin-top: -132px;
     }
  
 }
@@ -167,10 +167,15 @@ label{
     /*height: calc(100vh - 112px - 338px);*/
     overflow: hidden;
     position: relative;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 700;
     text-align: center;
-    border-bottom: 2px solid #5B9BD5;
+    border-bottom: 3px solid #5B9BD5;
+}
+@media (min-width: 768px){
+    .banner-wrapper{
+        font-size: 45px;
+    }
 }
 
 .banner-wrapper-ligh-color{
@@ -220,8 +225,8 @@ label{
 
 .konstrukce{
     border-bottom: 1px #767171 dashed;
-    font-size: 1.3em;
-    line-height: 1.3em;
+    font-size: 1.4em;
+    line-height: 1.4em;
     height: 40px;
     
     color: #767171
@@ -243,6 +248,7 @@ label{
     height: 20px;
     background-color: #FFE4C4;
     margin-top: 25px;
+    margin-bottom: 16px;
 }
 
 .sw-logo{
@@ -325,9 +331,13 @@ ul.sluzby-list{
 }
 
 .ref-container .toggle{
-    font-size: 45px;
+    color: #337ab7;
+    font-size: 50px;
     transform: rotate(-90deg);  
     line-height: 25px;
+}
+.ref-container .toggle:hover{
+    color: #286090
 }
 
 .ref-container .toggle:hover{
@@ -352,8 +362,8 @@ ul.sluzby-list{
 
 .reference-title{
     color: #888;
-    font-size: 1.2em;
-    font-weight: 900;
+    font-size: 1.1em;
+    font-weight: 700;
     margin-bottom: 4px;
     line-height: 1.1em;
 
@@ -385,9 +395,9 @@ ul.sluzby-list{
 }
 
 .home-section-header{
-    margin-top: 45px;
-    margin-bottom: 10px;
-    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 8px;
+    font-size: 26px;
     font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
     font-weight: 400;
 }
