@@ -323,7 +323,7 @@ function onSubmitContactForm(e) {
     if (validName && validEmail && validText) {
         var btn = $("#submit-btn"),
             loader = $("#submit-btn-loader"),
-            success = $("#submit-btn-success"),
+            successbtn = $("#submit-btn-success"),
             form = $("#contact-form")[0]
 
         var data = {
@@ -336,18 +336,18 @@ function onSubmitContactForm(e) {
         btn.hide();
         loader.show();
 
-        $.post("test.php", data)
+        $.post("http://localhost:4000/api/mail", data)
             .done(function () {
                 btn.hide();
                 loader.hide();
-                success.show();
+                successbtn.show();
                 clearForm();
                 instantValidateOff();
             })
             .fail(function () {
                 btn.show();
                 loader.hide();
-                success.hide();
+                successbtn.hide();
             })
     } else {
         instantValidateOn()
