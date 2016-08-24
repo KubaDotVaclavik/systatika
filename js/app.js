@@ -5,9 +5,13 @@ $(document).ready(function () {
 
     initMap()
 
+    setHeightOfHomeSection()
+
     $('#contact-form').on('submit', function (e) { e.preventDefault() })
     $("#submit-btn").on('click', onSubmitContactForm)
     $("#submit-btn-success").on('click', formDefaultState)
+
+    $(window).resize(setHeightOfHomeSection)
 });
 
 function initScrollspy() {
@@ -156,6 +160,7 @@ function referenceTemplating() {
         '<div class="reference-date">{date}</div>' +
         '</div>' +
         '<div class="bottom-mask"></div>' +
+        '<div class="toggle-wrapper"><div class="toggle">»</div></div>' +
         '</div>' +
         '</div>';
 
@@ -177,8 +182,14 @@ function referenceTemplating() {
         var $bgItem = $item.find('.reference-background')
         $bgItem.css("background-image", "url('" + item.background + "')")
 
+        $item.find('.toggle-wrapper').on('click', function(e){
+            e.stopPropagation()
+            $item.find('.ref-container').toggleClass('slideup')
+        })
+
         $("#reference-container").append($item)
     })
+
 }
 
 function initMap() {
@@ -206,6 +217,16 @@ function initMap() {
     //     infowindow.open(map, marker);
     // });
 
+}
+
+function setHeightOfHomeSection(){
+    var navbarHeight = $('.navbar').outerHeight()
+    var contentHeight = $('#home .content-wrapper').outerHeight()
+    var windowHeight = $(window).outerHeight()
+    var bannerHeight = windowHeight - contentHeight - navbarHeight
+    
+    bannerHeight = bannerHeight < 180 ? 180 : bannerHeight
+    $('#home .banner-wrapper').height(bannerHeight)
 }
 
 function openGallery(idx) {

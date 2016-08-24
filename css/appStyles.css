@@ -70,15 +70,30 @@ label{
 }
 
 .navbar-custom{
-    background-color: #fff;
+     background-color: #203864;
+    /*background-color: #fff;*/
     border: none;
     box-shadow: 0 0 8px #aaa;
     font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
 }
 .navbar-custom .navbar-nav > li > a{
-    color: #2E61BA;
+     color: #fff;
+    /*color: #2E61BA;*/
     font-size: 1em;
     padding: 6px 35px;
+}
+.navbar-custom .navbar-nav > li:hover > a{
+    color: #ccc
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus{
+ background-color: #2F5394;
+  color: #fff;
+
+}
+.navbar-menu-custom{
+    background-color: #203864;
 }
 
 .navbar-btn{
@@ -111,8 +126,8 @@ label{
     margin-top: 80px
 }
 .scrollspy-offset{
-    padding-top: 80px;
-    margin-top: -80px;
+    padding-top: 110px;
+    margin-top: -110px;
 }
 @media (min-width: 768px){
     .content{
@@ -120,8 +135,8 @@ label{
     }
 
     .scrollspy-offset{
-        padding-top: 112px;
-        margin-top: -112px;
+        padding-top: 132px;
+        margin-top: -132px;
     }
  
 }
@@ -149,13 +164,18 @@ label{
 }
 
 .banner-wrapper{
-    height: calc(100vh - 112px - 270px);
+    /*height: calc(100vh - 112px - 338px);*/
     overflow: hidden;
     position: relative;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 700;
     text-align: center;
-    border-bottom: 2px solid #5B9BD5;
+    border-bottom: 3px solid #5B9BD5;
+}
+@media (min-width: 768px){
+    .banner-wrapper{
+        font-size: 45px;
+    }
 }
 
 .banner-wrapper-ligh-color{
@@ -200,13 +220,13 @@ label{
 
 .konstrukce-wrapper{
     padding-left: 55px;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
 }
 
 .konstrukce{
     border-bottom: 1px #767171 dashed;
-    font-size: 1.3em;
-    line-height: 1.3em;
+    font-size: 1.4em;
+    line-height: 1.4em;
     height: 40px;
     
     color: #767171
@@ -228,6 +248,7 @@ label{
     height: 20px;
     background-color: #FFE4C4;
     margin-top: 25px;
+    margin-bottom: 16px;
 }
 
 .sw-logo{
@@ -259,12 +280,17 @@ ul.sluzby-list{
     height: 255px;
     position: relative;
 }
+.ref-container:hover{
+    box-shadow: 0 0 8px #aaa;
+
+}
 .ref-container .reference-img{
     width: 100%;
 }
 
 .ref-container .text-content{
     padding: 8px 16px 20px 16px;
+    box-shadow: 0 -3px 3px #eee;
     margin-top: 120px;
     height: 130px;
     overflow: hidden;
@@ -275,7 +301,7 @@ ul.sluzby-list{
     transition: all .2s ease-in-out;
 }
 
-.ref-container:hover .text-content{
+.ref-container.slideup .text-content{
     margin-top: 0px;
     height: 250px;
 }
@@ -289,6 +315,33 @@ ul.sluzby-list{
     height: 25px;
     width: 100%;
     bottom: 0;
+}
+.ref-container .toggle-wrapper{
+        padding: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    transition: all .2s ease-in-out;
+
+    background: rgba(255,255,255,0.7);
+}
+.ref-container.slideup .toggle-wrapper{
+    -webkit-transform: rotateX(180deg); /* Safari */
+    transform: rotateX(180deg);
+}
+
+.ref-container .toggle{
+    color: #337ab7;
+    font-size: 50px;
+    transform: rotate(-90deg);  
+    line-height: 25px;
+}
+.ref-container .toggle:hover{
+    color: #286090
+}
+
+.ref-container .toggle:hover{
+    /*transform: translateY(2px);*/
 }
 
 .ref-container-v2{
@@ -309,8 +362,8 @@ ul.sluzby-list{
 
 .reference-title{
     color: #888;
-    font-size: 1.2em;
-    font-weight: 900;
+    font-size: 1.1em;
+    font-weight: 700;
     margin-bottom: 4px;
     line-height: 1.1em;
 
@@ -342,8 +395,9 @@ ul.sluzby-list{
 }
 
 .home-section-header{
-    margin-bottom: 4px;
-    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 8px;
+    font-size: 26px;
     font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
     font-weight: 400;
 }

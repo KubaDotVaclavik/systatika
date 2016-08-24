@@ -1,4 +1,9 @@
 .pswp__caption__center{
-    font-size: 20px;
-    padding: 5px;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
 }   
+
+.pswp__container, .pswp__item{
+    background-color: #203864;
+}
