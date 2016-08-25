@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>SY statika</title>
+  <title>Statika a konstrukce staveb, Svitavy</title>
 
   <!-- Bootstrap -->
   <link href="libs/bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
@@ -22,34 +22,55 @@
   <script src="libs/jquery/jquery-3.1.0.min.js" type="text/javascript"></script>
   <script src="libs/bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
 
+
+  <!--photoswipe-->
+  <!-- Core CSS file -->
+  <link rel="stylesheet" href="libs/photoswipe/photoswipe.css">
+  <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+  <link rel="stylesheet" href="libs/photoswipe/default-skin/default-skin.css">
+  <!-- Core JS file -->
+  <script src="libs/photoswipe/photoswipe.min.js"></script>
+  <!-- UI JS file -->
+  <script src="libs/photoswipe/photoswipe-ui-default.min.js"></script>
+
+  <link rel="stylesheet" href="css/photoswipeCustom.css">
+
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN7ZuOpIRCEmHWdebNIH3xRs33qHTsl_I"></script>
+
   <script src="js/app.js" type="text/javascript"></script>
+
 
 </head>
 <!--
 <script src="hotreload/socket.io.js"></script>
 <script src="hotreload/client.js"></script>-->
 
-<body data-spy="scroll" data-target="#navbar">
+<body data-spy="scroll" data-target="#navbar" class="container-fluid">
   <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
     <div class="header">
 
       <div class="container header-content logo-background">
         <div class="row">
-          <div class="col-sm-6 col-lg-4 col-lg-offset-4 col-xs-offset-3 hidden-xs header-title">
-            Projekční a konstrukční kancelář
+          <div class="col-sm-3 col-lg-4 col-lg-offset-4 col-xs-offset-3 hidden-xs header-title">
+            <!--Projekční a konstrukční kancelář-->
           </div>
-          <div class="col-sm-3 col-lg-4 hidden-xs header-contacts-wrapper">
+          <div class="col-sm-6 col-lg-4 hidden-xs header-contacts-wrapper">
             <div class="row">
-                <a href="tel:+420776687686">
-              <div class="col-sm-12 col-lg-6 header-contact">
-                <span class="glyphicon glyphicon-phone"></span>+420 776 687 686
-              </div>
-                </a>
-                <a href="mailto:info@systatika.cz">
-              <div class="col-sm-12 col-lg-6 header-contact">
-                <span class="glyphicon glyphicon-envelope"></span>info@systatika.cz
-              </div>
-                </a>
+              <a href="tel:+420776687686">
+                <div class="col-sm-6 col-lg-6 header-contact">
+                  <span class="glyphicon glyphicon-phone"></span>+420 776 687 686
+                </div>
+              </a>
+              <a href="mailto:info@systatika.cz">
+                <div class="col-sm-6 col-lg-6 header-contact">
+                  <span class="glyphicon glyphicon-envelope"></span>info@systatika.cz
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -63,13 +84,13 @@
       </div>
     </div>
     <div class="container">
-      <div id="navbar" class="navbar-collapse collapse header-navbar">
+      <div id="navbar" class="navbar-menu-custom navbar-collapse collapse header-navbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#home">DOMŮ</a></li>
-          <li><a href="#profile">PROFIL</a></li>
-          <li><a href="#service">SLUŽBY</a></li>
-          <li><a href="#references">REFERENCE</a></li>
-          <li><a href="#contact">KONTAKT</a></li>
+          <li class="active" data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#home">DOMŮ</a></li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#profile">PROFIL</a></li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#service">SLUŽBY</a></li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#references">REFERENCE</a></li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#contact">KONTAKT</a></li>
         </ul>
 
       </div>
@@ -77,41 +98,53 @@
     </div>
   </nav>
 
-  <div class="container content">
-    <section class="row scrollspy-offset" id="home">
-      <div class="banner-wrapper col-xs-12 col-sm-6 padding-none">
-        <div class="img-banner1 banner-content parallax"></div>
-      </div>
-      <div class="banner-wrapper hidden-xs col-sm-6 padding-none">
-        <div class="img-banner2 banner-content parallax"></div>
-      </div>
-      <div class="horizontal-divide col-xs-12"></div>
+  <div class="content">
 
-      <div class="content-wrapper ">
-        <div class="col-xs-12 bottom-offset-md">
-          <h1 class=" home-section-header">Statika stavebních konstrukcí</h1>
-          <span class="header-decor"></span>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce beton-background">betonových</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce ocel-background">ocelových</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce drevo-background">dřevěných</div></div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce zaklady-background">základových</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce zdivo-background">zděných</div></div>
-          <div class="konstrukce-wrapper konstrukce-arrow-background"><div class="konstrukce oplasteni-background">opláštění staveb</div></div>
-        </div>
+    <section class="row scrollspy-offset  " id="home">
 
-        <div class="clearfix"></div>
+      <div class="banner-wrapper  banner-background">
+        <span class="banner-text">Projekční a konstrukční kancelář</span>
+        <!--<div class="img-banner1 banner-content hw-acceleration"></div>-->
       </div>
 
-      <div class="horizontal-divide col-xs-12"></div>
+      <div class="content-wrapper  container">
+        <div class="background-color">
+
+          <div class="col-xs-12 bottom-offset-md">
+            <h1 class=" home-section-header">Statika stavebních konstrukcí</h1>
+            <span class="header-decor"></span>
+          </div>
+          <div class="col-xs-12 col-sm-5 ">
+            <div class="konstrukce-wrapper konstrukce-arrow-background">
+              <div class="konstrukce beton-background">betonových</div>
+            </div>
+            <div class="konstrukce-wrapper konstrukce-arrow-background">
+              <div class="konstrukce ocel-background">ocelových</div>
+            </div>
+            <div class="konstrukce-wrapper konstrukce-arrow-background">
+              <div class="konstrukce drevo-background">dřevěných</div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+            <div class="konstrukce-wrapper konstrukce-arrow-background">
+              <div class="konstrukce zaklady-background">základových</div>
+            </div>
+            <div class="konstrukce-wrapper konstrukce-arrow-background">
+              <div class="konstrukce zdivo-background">zděných</div>
+            </div>
+            <div class="konstrukce-wrapper konstrukce-arrow-background">
+              <div class="konstrukce oplasteni-background">opláštění staveb</div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
     </section>
 
     <section class="row scrollspy-offset" id="profile">
-      <div class="content-wrapper ">
-        
+      <div class="content-wrapper container">
+
         <div class="col-xs-12 bottom-offset-md">
           <h1 class="section-header">Profil
             <span class="header-decor"></span>
@@ -119,16 +152,15 @@
         </div>
 
         <div class="col-xs-12 col-sm-5">
-          <p>
+          <p class="indent-justify">
             Provádím navrhování a posudky nosných stavebních konstrukcí a zpracovávám výrobní dokumentaci ocelových a betonových konstrukcí.
             Dbám na vysokou kvalitu projektů a konstrukčních detailů jak po stránce funkční, tak po stránce ekonomické a
-            v případě požadavku i estetické. Pro zpracování využívám moderní a efektivní postupy projektování stavebních
-            konstrukcí formou 3D modelů v programech <b>Scia Engineer, Tekla Structures a Allplan Engineer.</b>
+            v případě požadavku i estetické. Využívám  moderní a efektivní postupy projektování stavebních konstrukcí formou 3D modelů v programech 
+            <b>Tekla Structures, Allplan Engineer a Dlubal Sofware</b>.
           </p>
-          <p>
+          <p class="indent-justify">
             Nabízím spolupráci architektům, projektantům, dodavatelům staveb, investorům i drobným stavebníkům. Zpracovávám dílčí části
-            dokumentace jako statické posudky, statické výpočty nebo komplexní projektovou dokumentaci ve všech stupních
-            požadovaných vyhláškou o dokumentaci staveb.
+            dokumentace jako statické posudky, statické výpočty nebo komplexní projektovou dokumentaci.
           </p>
         </div>
         <div class="hidden-xs col-sm-7">
@@ -138,11 +170,10 @@
         <div class="clearfix"></div>
       </div>
 
-      <div class="horizontal-divide col-xs-12"></div>
     </section>
 
     <section class="row scrollspy-offset" id="service">
-      <div class="content-wrapper ">
+      <div class="content-wrapper container">
         <div class="col-xs-12">
           <h1 class="section-header">Služby
             <span class="header-decor"></span>
@@ -252,7 +283,7 @@
             </div>
 
             <div class="col-xs-4 col-sm-12 col-md-4">
-              <img src="img/scia.png" class="parent-width sw-logo" />
+              <img src="img/dlubal.png" class="parent-width sw-logo" />
             </div>
 
           </div>
@@ -260,43 +291,174 @@
         <div class="clearfix"></div>
       </div>
 
-      <div class="horizontal-divide col-xs-12"></div>
     </section>
 
     <section class="row scrollspy-offset" id="references">
-      <div class="content-wrapper ">
+      <div class="content-wrapper container">
         <div class="col-xs-12 bottom-offset-md">
           <h1 class="section-header">Reference
             <span class="header-decor"></span>
           </h1>
         </div>
 
-        <div class="col-xs-12 col-md-6">
-          <ul class="reference-list" id="reference-list-1"></ul>
-        </div>
+        <div id="reference-container"></div>
 
-        <div class="col-xs-12 col-md-6">
-          <ul class="reference-list" id="reference-list-2"></ul>
-        </div>
+        <!--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="ref-container reference-background" 
+              style="background: url('img/ref/thumbnails/alitech Brno haly A a B.JPG');">
+            <div class="text-content">
+              <div><b>Odsávání Odléváren VP4 a VP6</b></div>
+              <div>Třinecké Železárny a.s.</div>
+              <div>- výrobní dokumentace OK</div>
+              <div><small>- červenec  2013</small></div>
+            </div>
+          </div>
+        </div> -->
+
+        <!--<div class="col-xs-12 col-md-6">
+          <ul class="reference-list" id="reference-list-1">
+            <li class="reference-li">
+              <div class="reference-container">
+                <div class="reference-content">
+                  <div><b>Odsávání Odléváren VP4 a VP6</b></div>
+                  <div>Třinecké Železárny a.s.</div>
+                  <div>- výrobní dokumentace OK</div>
+                  <div><small>- červenec  2013</small></div>
+                </div>
+                <div class="reference-arrow">»</div>
+              </div>
+              <img src="img/reference_demo.png" class="reference-img" />
+            </li>
+          </ul>
+        </div>-->
+
 
         <div class="clearfix"></div>
       </div>
-      <div class="horizontal-divide col-xs-12"></div>
+
     </section>
 
     <section class="row scrollspy-offset" id="contact">
-      <div class="content-wrapper ">
+      <div class="content-wrapper container">
         <div class="col-xs-12">
           <h1 class="section-header">Kontakt
             <span class="header-decor"></span>
           </h1>
         </div>
+
+        <div class="col-xs-12 col-md-6">
+          <p>Ing. Lubomír Šmeral</p>
+          <p>Přední Arnoštov 19<br/>571 01 Moravská Třebová</p>
+          <p>IČ: 01547020<br/>DIČ: CZ7401063857</p>
+          <p>tel: +420 776 687 686<br/>email: info@systatika.cz</p>
+          <p>číslo ČKAIT: <a href="http://www.ckait.cz/expert/form/1006251">1006251</a> <br/>Pojištění pro případ profesní odpovědnosti u České pojišťovny a.s. na částku 1.000.000,-Kč
+            pro ČR a SK</p>
+          <p>Bankovní spojení:<br/> číslo účtu: 216361980 / 0600<br/> IBAN: CZ50 0600 0000 0002 1636 1980<br/> BIC: AGBACZPP
+          </p>
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+          <div class="map-container" id="map"></div>
+
+          <div class="row">
+            <h2 class="col-xs-12">Kontaktní formulář</h2>
+            <form class="kontakt-form" id="contact-form">
+
+              <div class="form-group col-xs-12 ">
+                <label class="control-label" for="contact-form-name">Jméno a příjmení</label>
+                <input  type="text" class="form-control" id="contact-form-name" name="name" />
+                <span id="contact-form-name-info" class="help-block"></span>
+              </div>
+
+              <div class="form-group col-xs-6 ">
+                <label class="control-label" for="contact-form-email">E-mail</label>
+                <input  type="email" class="form-control" id="contact-form-email" name="email" />
+                <span id="contact-form-email-info" class="help-block"></span>
+              </div>
+
+              <div class="form-group col-xs-6 ">
+                <label class="control-label" for="contact-form-phone">Telefon</label>
+                <input type="tel" class="form-control" id="contact-form-phone" name="phone" />
+                <span id="contact-form-phone-info" class="help-block"></span>
+              </div>
+
+              <div class="form-group col-xs-12 ">
+                <label class="control-label" for="contact-form-text">Text zprávy</label>
+                <textarea type="text" class="form-control" id="contact-form-text" name="text" maxlength="550"></textarea>
+                <span id="contact-form-text-info" class="help-block"></span>
+              </div>
+
+              <div class="col-xs-12">
+                <button class="btn btn-primary btn-lg" id="submit-btn" type="submit">Odeslat</button>
+                <button disabled="disabled" class="btn btn-primary btn-lg" id="submit-btn-loader" style="display: none; width: 90px">
+                  <span class="btn-icon glyphicon glyphicon-cog rotate "></span>
+                </button>
+                <button class="btn btn-success btn-lg " id="submit-btn-success" style="display: none; width: 90px" >
+                <span class="btn-icon glyphicon glyphicon-ok"></span>
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
       </div>
       <div class="horizontal-divide col-xs-12"></div>
     </section>
 
   </div>
   <!-- /container -->
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+      <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <!--  Controls are self-explanatory. Order can be changed. -->
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <!--<button class="pswp__button pswp__button--share" title="Share"></button>-->
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 

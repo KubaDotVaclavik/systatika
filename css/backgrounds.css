@@ -2,12 +2,73 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.banner-background{
+    background: url('../img/home3-xs.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.banner-background2{
+    background: url('../img/home4-xxs.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center 80px;
+}
+
+@media (min-width: 560px) {
+    .banner-background2{
+        background: url('../img/home4-xs.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center 80px;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-background2{
+        background: url('../img/home4-sm.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center 80px;
+    }
+    .banner-background{
+        background: url('../img/home3-sm.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+}
+@media (min-width: 992px) {
+    .banner-background2{
+        background: url('../img/home4-md.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center 80px;
+    }
+}
+@media (min-width: 1200px) {
+    .banner-background2{
+        background: url('../img/home4-md.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center 80px;
+    }
+    .banner-background{
+        background: url('../img/home3.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+}
+
 .img-banner1{
-    background: url('../img/banner1.png');
+    background: url('../img/home1.png');
     background-size: cover
 }
 .img-banner2{
-    background: url('../img/banner2.png');
+    background: url('../img/home2.png');
     background-size: cover
 }
 .img-profil{
@@ -17,7 +78,7 @@
 
 .logo-background{
     background: url('../img/logo.png');
-    background-size: 150px 38px;
+    background-size: 193px 50px;
     background-repeat: no-repeat;
     background-position:  15px;
 }
@@ -36,7 +97,7 @@
 
 .sluzby-arrow-background{
     background: url('../img/konstrukce_arrow.png');
-    background-size: 16px 22px;
+    background-size: 14px 20px;
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -45,7 +106,7 @@
     background: url('../img/konstrukce_arrow.png');
     background-size: 20px 22px;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left 6px;
 }
 
 .beton-background{
@@ -88,4 +149,9 @@
     background-size: 70px 35px;
     background-repeat: no-repeat;
     background-position: right center;
+}
+
+.reference-background{
+    background-size: contain;
+    background-repeat: no-repeat
 }

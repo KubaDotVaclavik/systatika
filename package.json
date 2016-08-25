@@ -1,0 +1,30 @@
+{
+  "name": "systatika",
+  "version": "1.0.0",
+  "description": "\t",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KubaDotVaclavik/systatika.git"
+  },
+  "keywords": [
+    "firemní",
+    "stránky"
+  ],
+  "author": "Kuba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KubaDotVaclavik/systatika/issues"
+  },
+  "homepage": "https://github.com/KubaDotVaclavik/systatika#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mailgun-js": "^0.7.12",
+    "multer": "^1.2.0"
+  }
+}
