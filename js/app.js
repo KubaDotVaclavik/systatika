@@ -357,7 +357,7 @@ function onSubmitContactForm(e) {
         btn.hide();
         loader.show();
 
-        $.post("http://localhost:4000/api/mail", data)
+        $.post("http://www.systatika.cz/api/mail", data)
             .done(function () {
                 btn.hide();
                 loader.hide();

@@ -13,6 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 app.use('/',express.static(__dirname));
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "www.systatika.cz");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 app.get('/api/*', function (req, res) {
   res.sendStatus(404);
 });
