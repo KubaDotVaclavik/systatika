@@ -89,48 +89,56 @@ function referenceTemplating() {
             subtitle: "Dendera Němčice",
             doc: "projektová a výrobní dokumentace nosné OK a opláštění",
             date: "leden 2015",
+            background: "img/gallery/10_dendera/thumbnail.jpg",
         },
         {
             title: "Přístavba provozovny, motosalón",
             subtitle: "Autonova Brno",
             doc: "projektová dokumentace nosné OK",
             date: "březen 2015",
+            background: "img/gallery/11_autonova/thumbnail.jpg",
         },
         {
             title: "Dopravní cesta z linky B na plato č.3",
             subtitle: "Sklopísek Střeleč a.s.",
             doc: "projektová dokumentace technologických konstrukcí",
             date: "červenec  2015",
+            background: "img/gallery/12_sklopisek/thumbnail.jpg",
         },
         {
             title: "Novostavba hal A a B",
             subtitle: "Alitech Plus s.r.o. Brno",
             doc: "statický výpočet nosných OK",
             date: "srpen 2015",
+            background: "img/gallery/13_alitech/thumbnail.jpg",
         },
         {
             title: "Administrativní budova Pohledy - Samoty",
             subtitle: "Švábstaf s.r.o",
             doc: "projektová a výrobní dokumentace nosné OK a opláštění",
             date: "září 2015",
+            background: "img/gallery/14_pohledy/thumbnail.jpg",
         },
         {
             title: "Zastřešení hnojiště",
             subtitle: "Agro CS Lučenec",
             doc: "projektová a výrobní dokumentace",
             date: "prosinec 2015",
+            background: "img/gallery/15_hnojiste/thumbnail.jpg",
         },
         {
             title: "Výrobní hala",
             subtitle: "Marston CZ s.r.o Brno",
             doc: "projektová a výrobní dokumentace nosné OK",
             date: "leden 2016",
+            background: "img/gallery/16_marston/thumbnail.jpg",
         },
         {
             title: "Zastřešení biomasy",
             subtitle: "Agro CS Lučenec",
             doc: "projektová a výrobní dokumentace",
             date: "březen 2016",
+            background: "img/gallery/17_lucenec/thumbnail.jpg",
         }
 
     ]
@@ -224,7 +232,7 @@ function setHeightOfHomeSection(){
     var contentHeight = $('#home .content-wrapper').outerHeight()
     var windowHeight = $(window).outerHeight()
     var bannerHeight = windowHeight - contentHeight - navbarHeight
-    
+
     bannerHeight = bannerHeight < 180 ? 180 : bannerHeight
     $('#home .banner-wrapper').height(bannerHeight)
 }
@@ -296,11 +304,73 @@ function openGallery(idx) {
             ]
         },
         '09_bites2':{
-            title: 'Přístavby haly 2',
+            title: 'Přístavby haly Pronovia',
             items:[
                 {w: 1200,h: 583},
                 {w: 600,h: 450},
                 {w: 600,h: 450}
+            ]
+        },
+        '10_dendera':{
+            title: 'Výrobní hala Dendera',
+            items:[
+                {w: 1200,h: 583},
+                {w: 600,h: 450},
+                {w: 600,h: 450}
+            ]
+        },
+        '11_autonova':{
+            title: 'Přístavba provozovny, motosalón',
+            items:[
+                {w: 1200,h: 675},
+                {w: 1024,h: 768},
+                {w: 1024,h: 768}
+            ]
+        },
+        '12_sklopisek':{
+            title: 'Dopravní cesta',
+            items:[
+                {w: 1200,h: 942},
+                {w: 1200,h: 551},
+                {w: 1200,h: 551}
+            ]
+        },
+        '13_alitech':{
+            title: 'Novostavba hal Alitech',
+            items:[
+                {w: 1200,h: 675},
+                {w: 1200,h: 675},
+            ]
+        },
+        '14_pohledy':{
+            title: 'Administrativní budova Pohledy',
+            items:[
+                {w: 1200,h: 551},
+                {w: 600,h: 450},
+                {w: 600,h: 450},
+            ]
+        },
+        '15_hnojiste':{
+            title: 'Zastřešení hnojiště',
+            items:[
+                {w: 1200,h: 551},
+                {w: 1049,h: 711},
+                {w: 1280,h: 960},
+            ]
+        },
+        '16_marston':{
+            title: 'Výrobní hala Marston',
+            items:[
+                {w: 1200,h: 573},
+                {w: 1200,h: 675},
+                {w: 1001,h: 741},
+            ]
+        },
+        '17_lucenec':{
+            title: 'Zastřešení biomasy Lučenec',
+            items:[
+                {w: 1200,h: 573},
+                {w: 1049,h: 657},
             ]
         }
     }
@@ -344,7 +414,7 @@ function onSubmitContactForm(e) {
     if (validName && validEmail && validText) {
         var btn = $("#submit-btn"),
             loader = $("#submit-btn-loader"),
-            success = $("#submit-btn-success"),
+            successbtn = $("#submit-btn-success"),
             form = $("#contact-form")[0]
 
         var data = {
@@ -357,18 +427,18 @@ function onSubmitContactForm(e) {
         btn.hide();
         loader.show();
 
-        $.post("test.php", data)
+        $.post("http://www.systatika.cz/api/mail", data)
             .done(function () {
                 btn.hide();
                 loader.hide();
-                success.show();
+                successbtn.show();
                 clearForm();
                 instantValidateOff();
             })
             .fail(function () {
                 btn.show();
                 loader.hide();
-                success.hide();
+                successbtn.hide();
             })
     } else {
         instantValidateOn()
