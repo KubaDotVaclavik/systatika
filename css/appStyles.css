@@ -30,7 +30,7 @@ label{
 
 .header{
     background: linear-gradient(0deg, #5C84CB, #2E61BA);
-    
+
 }
 
 .header-content{
@@ -85,8 +85,8 @@ label{
 .navbar-custom .navbar-nav > li:hover > a{
     color: #ccc
 }
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus{
  background-color: #2F5394;
   color: #fff;
@@ -138,7 +138,7 @@ label{
         padding-top: 132px;
         margin-top: -132px;
     }
- 
+
 }
 
 .horizontal-divide{
@@ -154,7 +154,7 @@ label{
 
 .content-wrapper{
     padding-bottom: 50px;
-    
+
     background-color: #fff;
     /*padding-left: 25px;
     padding-right:25px*/
@@ -228,7 +228,7 @@ label{
     font-size: 1.4em;
     line-height: 1.4em;
     height: 40px;
-    
+
     color: #767171
 }
 
@@ -333,7 +333,7 @@ ul.sluzby-list{
 .ref-container .toggle{
     color: #337ab7;
     font-size: 50px;
-    transform: rotate(-90deg);  
+    transform: rotate(-90deg);
     line-height: 25px;
 }
 .ref-container .toggle:hover{
@@ -392,6 +392,7 @@ ul.sluzby-list{
     text-transform: uppercase;
     font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
     font-weight: 600;
+    margin-bottom: 33px;
 }
 
 .home-section-header{
@@ -421,7 +422,7 @@ ul.sluzby-list{
 
 .kontakt-form .btn-lg{
     border-radius: 0
-} 
+}
 
 .kontakt-input{
     /*width: 100%;
