@@ -4,4 +4,4 @@ node_modules
 /Client/build
 systatika.pptx
 
-npm-debug.log*
+npm-debug.*
