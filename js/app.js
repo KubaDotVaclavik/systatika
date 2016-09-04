@@ -92,7 +92,7 @@ function referenceTemplating() {
             background: "img/gallery/10_dendera/thumbnail.jpg",
         },
         {
-            title: "Přístavba provozovny, motosalón",
+            title: "Přístavba provozovny motosalónu",
             subtitle: "Autonova Brno",
             doc: "projektová dokumentace nosné OK",
             date: "březen 2015",
@@ -258,7 +258,7 @@ function openGallery(idx) {
             ]
         },
         '03_baumuller': {
-            title: 'Dostavba výrobního areálu Skalice nad Svitavou',
+            title: 'Dostavba výrobního areálu, Baumuller Skalice nad Svitavou',
             items: [
                 {w: 1200,h: 579},
                 {w: 1200,h: 579},
@@ -266,14 +266,14 @@ function openGallery(idx) {
             ]
         },
         '04_pyrotek':{
-            title: 'Výrobní hala, administrativní přístavba a vestavba',
+            title: 'Výrobní hala, administrativní přístavba a vestavba, Pyrotek Blansko',
             items:[
                 {w: 1200,h: 579},
                 {w: 1200,h: 579}
             ]
         },
         '05_bites':{
-            title: 'Nosná OK vestavby kanceláří',
+            title: 'Nosná OK vestavby kanceláří, ITW Pronovia Velká Bíteš',
             items:[
                 {w: 1200,h: 579},
                 {w: 1200,h: 579}
@@ -290,7 +290,7 @@ function openGallery(idx) {
             ]
         },
         '07_keramost':{
-            title: 'Inovace výrobkové řady bentonitových steliv',
+            title: 'Inovace výrobkové řady bentonitových steliv, Keramost Prunéřov',
             items:[
                 {w: 1200,h: 675},
                 {w: 1200,h: 675},
@@ -298,13 +298,13 @@ function openGallery(idx) {
             ]
         },
         '08_kurim':{
-            title: 'Přístavba výrobní haly Kuřim',
+            title: 'Přístavba výrobní haly, Kuřim',
             items:[
                 {w: 1200,h: 573}
             ]
         },
         '09_bites2':{
-            title: 'Přístavby haly Pronovia',
+            title: 'Přístavba haly, IWT Pronovia Velká Bíteš',
             items:[
                 {w: 1200,h: 583},
                 {w: 600,h: 450},
@@ -312,7 +312,7 @@ function openGallery(idx) {
             ]
         },
         '10_dendera':{
-            title: 'Výrobní hala Dendera',
+            title: 'Výrobní hala, Dendera Němčice',
             items:[
                 {w: 1200,h: 583},
                 {w: 600,h: 450},
@@ -320,7 +320,7 @@ function openGallery(idx) {
             ]
         },
         '11_autonova':{
-            title: 'Přístavba provozovny, motosalón',
+            title: 'Přístavba provozovny motosalónu, Autonova Brno',
             items:[
                 {w: 1200,h: 675},
                 {w: 1024,h: 768},
@@ -328,7 +328,7 @@ function openGallery(idx) {
             ]
         },
         '12_sklopisek':{
-            title: 'Dopravní cesta',
+            title: 'Technologické konstrukce, Sklopísek Střeleč',
             items:[
                 {w: 1200,h: 942},
                 {w: 1200,h: 551},
@@ -336,14 +336,14 @@ function openGallery(idx) {
             ]
         },
         '13_alitech':{
-            title: 'Novostavba hal Alitech',
+            title: 'Novostavba hal, Alitech Brno',
             items:[
                 {w: 1200,h: 675},
                 {w: 1200,h: 675},
             ]
         },
         '14_pohledy':{
-            title: 'Administrativní budova Pohledy',
+            title: 'Administrativní budova, Pohledy-Samoty',
             items:[
                 {w: 1200,h: 551},
                 {w: 600,h: 450},
@@ -351,15 +351,14 @@ function openGallery(idx) {
             ]
         },
         '15_hnojiste':{
-            title: 'Zastřešení hnojiště',
+            title: 'Zastřešení hnojiště, Agro CS Lučenec',
             items:[
                 {w: 1200,h: 551},
                 {w: 1049,h: 711},
-                {w: 1280,h: 960},
             ]
         },
         '16_marston':{
-            title: 'Výrobní hala Marston',
+            title: 'Výrobní hala, Marston',
             items:[
                 {w: 1200,h: 573},
                 {w: 1200,h: 675},
@@ -367,7 +366,7 @@ function openGallery(idx) {
             ]
         },
         '17_lucenec':{
-            title: 'Zastřešení biomasy Lučenec',
+            title: 'Zastřešení biomasy, Agro CS Lučenec',
             items:[
                 {w: 1200,h: 573},
                 {w: 1049,h: 657},
