@@ -4,59 +4,23 @@
 }
 
 .banner-background{
-    background: url('../img/home3-xs.png');
+    background: url('../img/home3-xs.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 
-.banner-background2{
-    background: url('../img/home4-xxs.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center 80px;
-}
-
-@media (min-width: 560px) {
-    .banner-background2{
-        background: url('../img/home4-xs.png');
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: center 80px;
-    }
-}
-
 @media (min-width: 768px) {
-    .banner-background2{
-        background: url('../img/home4-sm.png');
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: center 80px;
-    }
     .banner-background{
-        background: url('../img/home3-sm.png');
+        background: url('../img/home3-sm.jpg');
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center bottom;
     }
 }
-@media (min-width: 992px) {
-    .banner-background2{
-        background: url('../img/home4-md.png');
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: center 80px;
-    }
-}
 @media (min-width: 1200px) {
-    .banner-background2{
-        background: url('../img/home4-md.png');
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: center 80px;
-    }
     .banner-background{
-        background: url('../img/home3.png');
+        background: url('../img/home3.jpg');
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -72,7 +36,7 @@
     background-size: cover
 }
 .img-profil{
-    background: url('../img/profil.png');
+    background: url('../img/profil.jpg');
     background-size: cover
 }
 

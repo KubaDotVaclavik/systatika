@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     referenceTemplating()
 
-    initMap()
+    loadMap()
 
     setHeightOfHomeSection()
 
@@ -200,6 +200,17 @@ function referenceTemplating() {
 
 }
 
+function loadMap() {
+    var script = $('<script>', {
+        type: "text/javascript",
+        src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDJRHPA3wjxMDrQ_Jp78hbrisNxoXeE7uk&callback=initMap",
+    })
+    window.initMap = initMap;
+
+    setTimeout(function () {
+        $("head").append(script);
+    }, 1500)
+}
 function initMap() {
     var mapProp = {
         center: new google.maps.LatLng(49.696814, 16.691488),
@@ -225,7 +236,7 @@ function initMap() {
     //     infowindow.open(map, marker);
     // });
 
-    // disable scroll hack
+    // Hack: disable scroll 
     $('.map-cover').click(function () {
         $('.map-cover').removeClass("extended");
     });
@@ -234,7 +245,7 @@ function initMap() {
         $('.map-cover').addClass("extended");
     });
 
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         $('.map-cover').addClass("extended");
     });
 
