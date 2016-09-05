@@ -212,7 +212,9 @@ function initMap() {
 
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(49.6870824, 16.6668806),
-        map: map
+        map: map,
+        scrollwheel: false,
+        draggable: false
     });
 
     // var infowindow = new google.maps.InfoWindow({
