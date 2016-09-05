@@ -190,7 +190,7 @@ function referenceTemplating() {
         var $bgItem = $item.find('.reference-background')
         $bgItem.css("background-image", "url('" + item.background + "')")
 
-        $item.find('.toggle-wrapper').on('click', function(e){
+        $item.find('.toggle-wrapper').on('click', function (e) {
             e.stopPropagation()
             $item.find('.ref-container').toggleClass('slideup')
         })
@@ -213,8 +213,6 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(49.6870824, 16.6668806),
         map: map,
-        scrollwheel: false,
-        draggable: false
     });
 
     // var infowindow = new google.maps.InfoWindow({
@@ -227,9 +225,22 @@ function initMap() {
     //     infowindow.open(map, marker);
     // });
 
+    // disable scroll hack
+    $('.map-cover').click(function () {
+        $('.map-cover').removeClass("extended");
+    });
+
+    $("#map").mouseleave(function () {
+        $('.map-cover').addClass("extended");
+    });
+
+    $(window).scroll(function(){
+        $('.map-cover').addClass("extended");
+    });
+
 }
 
-function setHeightOfHomeSection(){
+function setHeightOfHomeSection() {
     var navbarHeight = $('.navbar').outerHeight()
     var contentHeight = $('#home .content-wrapper').outerHeight()
     var windowHeight = $(window).outerHeight()
@@ -247,131 +258,131 @@ function openGallery(idx) {
         '01_odsavani': {
             title: 'Odsávání Odléváren VP4 a VP6',
             items: [
-                {w: 1200,h: 579},
-                {w: 1200,h: 894},
+                { w: 1200, h: 579 },
+                { w: 1200, h: 894 },
             ]
         },
         '02_norsko': {
             title: 'Montážní jámy Norsko délky 27,0m',
             items: [
-                {w: 1200,h: 497},
-                {w: 1200,h: 579},
-                {w: 1200,h: 579},
+                { w: 1200, h: 497 },
+                { w: 1200, h: 579 },
+                { w: 1200, h: 579 },
             ]
         },
         '03_baumuller': {
             title: 'Dostavba výrobního areálu, Baumuller Skalice nad Svitavou',
             items: [
-                {w: 1200,h: 579},
-                {w: 1200,h: 579},
-                {w: 1200,h: 579},
+                { w: 1200, h: 579 },
+                { w: 1200, h: 579 },
+                { w: 1200, h: 579 },
             ]
         },
-        '04_pyrotek':{
+        '04_pyrotek': {
             title: 'Výrobní hala, administrativní přístavba a vestavba, Pyrotek Blansko',
-            items:[
-                {w: 1200,h: 579},
-                {w: 1200,h: 579}
+            items: [
+                { w: 1200, h: 579 },
+                { w: 1200, h: 579 }
             ]
         },
-        '05_bites':{
+        '05_bites': {
             title: 'Nosná OK vestavby kanceláří, ITW Pronovia Velká Bíteš',
-            items:[
-                {w: 1200,h: 579},
-                {w: 1200,h: 579}
+            items: [
+                { w: 1200, h: 579 },
+                { w: 1200, h: 579 }
             ]
         },
-        '06_benaly':{
+        '06_benaly': {
             title: 'Skladové haly s textilním opláštěním',
-            items:[
-                {w: 1200,h: 551},
-                {w: 1200,h: 573},
-                {w: 1200,h: 573},
-                {w: 600,h: 450},
-                {w: 600,h: 338},
+            items: [
+                { w: 1200, h: 551 },
+                { w: 1200, h: 573 },
+                { w: 1200, h: 573 },
+                { w: 600, h: 450 },
+                { w: 600, h: 338 },
             ]
         },
-        '07_keramost':{
+        '07_keramost': {
             title: 'Inovace výrobkové řady bentonitových steliv, Keramost Prunéřov',
-            items:[
-                {w: 1200,h: 675},
-                {w: 1200,h: 675},
-                {w: 1200,h: 675}
+            items: [
+                { w: 1200, h: 675 },
+                { w: 1200, h: 675 },
+                { w: 1200, h: 675 }
             ]
         },
-        '08_kurim':{
+        '08_kurim': {
             title: 'Přístavba výrobní haly, Kuřim',
-            items:[
-                {w: 1200,h: 573}
+            items: [
+                { w: 1200, h: 573 }
             ]
         },
-        '09_bites2':{
+        '09_bites2': {
             title: 'Přístavba haly, IWT Pronovia Velká Bíteš',
-            items:[
-                {w: 1200,h: 583},
-                {w: 600,h: 450},
-                {w: 600,h: 450}
+            items: [
+                { w: 1200, h: 583 },
+                { w: 600, h: 450 },
+                { w: 600, h: 450 }
             ]
         },
-        '10_dendera':{
+        '10_dendera': {
             title: 'Výrobní hala, Dendera Němčice',
-            items:[
-                {w: 1200,h: 583},
-                {w: 600,h: 450},
-                {w: 600,h: 450}
+            items: [
+                { w: 1200, h: 583 },
+                { w: 600, h: 450 },
+                { w: 600, h: 450 }
             ]
         },
-        '11_autonova':{
+        '11_autonova': {
             title: 'Přístavba provozovny motosalónu, Autonova Brno',
-            items:[
-                {w: 1200,h: 675},
-                {w: 1024,h: 768},
-                {w: 1024,h: 768}
+            items: [
+                { w: 1200, h: 675 },
+                { w: 1024, h: 768 },
+                { w: 1024, h: 768 }
             ]
         },
-        '12_sklopisek':{
+        '12_sklopisek': {
             title: 'Technologické konstrukce, Sklopísek Střeleč',
-            items:[
-                {w: 1200,h: 942},
-                {w: 1200,h: 551},
-                {w: 1200,h: 551}
+            items: [
+                { w: 1200, h: 942 },
+                { w: 1200, h: 551 },
+                { w: 1200, h: 551 }
             ]
         },
-        '13_alitech':{
+        '13_alitech': {
             title: 'Novostavba hal, Alitech Brno',
-            items:[
-                {w: 1200,h: 675},
-                {w: 1200,h: 675},
+            items: [
+                { w: 1200, h: 675 },
+                { w: 1200, h: 675 },
             ]
         },
-        '14_pohledy':{
+        '14_pohledy': {
             title: 'Administrativní budova, Pohledy-Samoty',
-            items:[
-                {w: 1200,h: 551},
-                {w: 600,h: 450},
-                {w: 600,h: 450},
+            items: [
+                { w: 1200, h: 551 },
+                { w: 600, h: 450 },
+                { w: 600, h: 450 },
             ]
         },
-        '15_hnojiste':{
+        '15_hnojiste': {
             title: 'Zastřešení hnojiště, Agro CS Lučenec',
-            items:[
-                {w: 1200,h: 551},
-                {w: 1049,h: 711},
+            items: [
+                { w: 1200, h: 551 },
+                { w: 1049, h: 711 },
             ]
         },
-        '16_marston':{
+        '16_marston': {
             title: 'Výrobní hala, Marston',
-            items:[
-                {w: 1200,h: 573},
-                {w: 1200,h: 675},
-                {w: 1001,h: 741},
+            items: [
+                { w: 1200, h: 573 },
+                { w: 1200, h: 675 },
+                { w: 1001, h: 741 },
             ]
         },
-        '17_lucenec':{
+        '17_lucenec': {
             title: 'Zastřešení biomasy, Agro CS Lučenec',
-            items:[
-                {w: 1200,h: 573},
-                {w: 1049,h: 657},
+            items: [
+                { w: 1200, h: 573 },
+                { w: 1049, h: 657 },
             ]
         }
     }
@@ -379,11 +390,11 @@ function openGallery(idx) {
     startIdx = 0;
     data = [];
 
-    Object.keys(galleryItems).forEach(function(key, i, arr){
-        if(i < idx){
+    Object.keys(galleryItems).forEach(function (key, i, arr) {
+        if (i < idx) {
             startIdx += galleryItems[key].items.length
         }
-        galleryItems[key].items.forEach(function(item, ii){
+        galleryItems[key].items.forEach(function (item, ii) {
             data.push({
                 src: 'img/gallery/' + key + '/' + ('0' + (ii + 1)).slice(-2) + '.jpg',
                 w: item.w,

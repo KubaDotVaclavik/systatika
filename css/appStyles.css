@@ -413,7 +413,22 @@ ul.sluzby-list{
 
 .map-container{
     height: 350px;
+    z-index: 1;
 }
+.map-cover{
+    position: absolute;
+    background-color: rgba(255,255,255,0);
+    height: 0px;
+    width: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+.map-cover.extended{
+    height: 350px;
+}
+/*#map iframe{
+    pointer-events: none;
+}*/
 
 .kontakt-form > div.form-group{
     padding-bottom: 20px;
