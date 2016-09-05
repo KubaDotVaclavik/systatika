@@ -251,6 +251,10 @@ label{
     margin-bottom: 30px;
 }
 
+.sw-logo-container{
+    text-align: center;
+}
+
 .sw-logo{
     max-width: 200px
 }
